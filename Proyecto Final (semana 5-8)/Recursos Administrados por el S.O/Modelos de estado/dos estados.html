@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilo3.css">
+    <title>PROYECTO FINAL</title>
+</head>
+<body>
+    <h1>Modelo de dos estados</h1>
+    <img src="../modelo estados.png" alt="" height="350px">
+    <ul>
+        <li>En este modelo, un proceso puede estar ejecutándose o no. Cuando
+            se crea un nuevo proceso, se pone en estado de No ejecución.</li>
+        <li>En algún momento el proceso que se está ejecutando pasará al
+            estado No ejecución y otro proceso se elegirá de la lista
+            de procesos listos para ejecutar para ponerlo en estado Ejecución.</li>
+        <li>De esta explicación se desprende que es necesario que el sistema
+            operativo pueda seguirle la pista a los procesos, conociendo su
+            estado y el lugar que ocupa en memoria. Además los procesos que
+            no se están ejecutando deben guardarse en algún tipo de cola
+            mientras esperan su turno para ejecutar.</li>
+    </ul>
+    <a href="../so.html">Volver</a>
+    <p>Te podría interesar:</p>
+    <ul>
+        <li><a href="../Modelos de estado/cinco estados.html">Modelo de cinco estados</a></li>
+        <li><a href="../Modelos de estado/estado proceso.html">Estado de un proceso</a></li>
+        <li><a href="../Modelos de estado/bloqueados.html">Bloqueados</a></li>
+        <li><a href="../Modelos de estado/bcp.html">El PCB O BCP (bloqueo control del  proceso)</a></li>
+    </ul>
+</body>
+</html>

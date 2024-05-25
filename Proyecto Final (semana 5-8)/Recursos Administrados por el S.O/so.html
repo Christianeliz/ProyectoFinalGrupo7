@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="../stilo2.css">
+    <title>PROYECTO FINAL</title>
+</head>
+<body>
+        <h1>¿Que es un proceso?</h1>
+        <p>Un proceso puede informalmente entenderse como
+            un programa en ejecución. Formalmente un proceso es "Una
+            unidad de actividad que se caracteriza por la ejecución de una
+            secuencia de instrucciones, un estado actual, y un conjunto de
+            recursos del sistema asociados.</p>
+            <p>Ejemplo: </p>
+        <img src="./img/control de procesos ejemplo.png" alt="" height="350px">
+        <br>
+
+        <h1>Modelo de procesos</h1>
+        <p>Los estándares establecen los diferentes procesos implicados a la hora de
+        desarrollar y mantener un sistema desde que surge la idea o necesidad de
+        desarrollar las aplicaciones hasta que éstas se retiran de explotación. Sin
+        embargo, ninguno impone un modelo de procesos concreto (modelo de ciclo de
+        vida) ni cómo realizar las diferentes actividades incluidas en cada proceso, por lo
+        que cada empresa deberá utilizar los métodos, técnicas y herramientas que
+        considere oportuno.</p>
+        <br>
+
+        <h3>Posee las siguientes características: </h3>
+        <ul>
+            <li>Todo el software ejecutable, inclusive <a href="./Modelos caracteristicas/sistema operativo.html">el Sistema Operativo,</a>se
+                organiza en varios <a href="./Modelos caracteristicas/Psecuencial.html">procesos secuenciales</a> o <a href="./Modelos caracteristicas/proceso.html">procesos</a>.</li>
+            <li>Un proceso incluye al programa en ejecucion y a los valores
+                activos del contador, registros y variables del mismo.</li>
+            <li>Conceptualmente cada proceso tiene su propia <a href="./Modelos caracteristicas/cpu virtual.html">CPU virtual</a>.</li>
+            <li>Un proceso es una actividad de un cierto tipo, que tiene un
+                programa, entrada, salida y estado.</li>
+        </ul>
+        <br>
+        <p>Un solo procesador puede ser compartido entre varios
+            procesos con cierto "algoritmo de planificación", el cual
+            determina cuándo detener el trabajo en un proceso y dar
+            servicio a otro distinto.</p>
+            <img src="./img/modelo procesos.png" alt="" height="350px">
+        <br>
+        
+        <h2>Sistema Multihilo</h2>
+            <h3>¿Que es un Sistema Operativo Multihilo?</h3>
+            <p>Es aquel Sistema Operativo que posee varios hilos de
+                ejecución.
+                
+                Un hilo de Ejecucion o subproceso es una caracteristica que
+                permite a una aplicación realizar varias tareas a la vez
+                (concurrentemente).
+                
+                Los distintos hilos de ejecucion comparten una serie de
+                recursos tales como el espacio de memoria, los archivos
+                abiertos, situación de autenticación, etc.
+                
+                Los procesos son creados y destruidos por el sistema
+                operativo, así como tambien este se debe hacer cargo de
+                la comunicación entre procesos, pero lo hace a petición de
+                otros procesos.El mecanismo por el cual un proceso crea otro proceso se
+                denomina bifurcacion (fork). Los nuevos procesos son
+                independientes y no comparten memoria (es decir,
+                información) con el proceso que los ha creado, en los sistemas operativos multihilo es posible crear tanto hilos como procesos. La diferencia es en que un proceso solamente puede crear hilos para sí mismo.</p>
+                <br>
+                <p>No hay un acuerdo universal sobre una definicion de proceso,
+                    pero sí algunas definiciones aceptadas:</p>
+                <ul>
+                    <li>Un programa que se está ejecutando.</li>
+                    <li>Una actividad asincrónica.</li>
+                    <li>El emplazamiento del control de un procedimiento que está
+                        siendo ejecutado.</li>
+                    <li>Aquello que se manifiesta por la existencia en el Sistema
+                        Operativo de un bloque de control de proceso.</li>
+                    <li>Aquella entidad a la cual son asignados los procesadores.</li>
+                    <li>La unidad despachable.</li>
+                </ul>
+        <br>
+        <h2>Estados de un proceso</h2>
+        <p>El principal trabajo del procesador es ejecutar las instrucciones en memoria principal. Estas instrucciones se encuentran en
+            forma de programas. Para que un programa pueda ser
+            ejecutado, el sistema operativo crea un nuevo proceso, y el
+            procesador ejecuta una tras otra las instrucciones del mismo.</p>
+        <h3>Características</h3>
+        <ul>
+            <li>Cada proceso es una entidad independiente pero frecuentemente
+                debe interactuar con otros procesos.</li>
+            <li>                
+                Los procesos pueden bloquearse en su ejecución porque desde el punto de vista lógico no puede continuar porque espera
+                datos que aún no están disponibles.</li>
+            <li>El Sistema Operativo asignó la CPU a otro proceso.</li>
+            <li>En ejecución: utiliza la CPU en el instante dado.</li>
+            <li>Listo: ejecutable, se detiene en forma temporal para que se ejecute
+                otro proceso.</li>
+            <li>Bloqueado: no se puede ejecutar debido a la ocurrencia de algún
+                evento externo.</li>
+        </ul>
+        <br>
+        <h3>Modelos de estados</h3>
+        <ul>
+            <li><a href="./Modelos de estado/dos estados.html">Modelo de dos estados</a></li>
+            <li><a href="./Modelos de estado/cinco estados.html">Modelo de cinco estados</a></li>
+            <li><a href="./Modelos de estado/estado proceso.html">Estado de un proceso</a></li>
+            <li><a href="./Modelos de estado/bloqueados.html">Bloqueados</a></li>
+            <li><a href="./Modelos de estado/bcp.html">El PCB O BCP (bloqueo control del  proceso)</a></li>
+        </ul>
+<br>
+<p><a href="../../Pagina Principal.html">Volver</a></p>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo 12</title>
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../stilo.css">
+</head>
+<body>
+    <h2>Normalización de base de datos</h2>
+    <h3>¿Qué es la normalización?</h3>
+    <p>Es la aplicación de un conjunto de reglas que permite aprobar la construcción de un modelo de base de datos relacionales. Es el proceso de organizar los datos de una base de datos. Se incluye la creación de tablas y el establecimiento de relaciones entre ellas según reglas diseñadas tanto para proteger los datos como para hacer que la base de datos sea más flexible al eliminar la redundancia y las dependencias incoherentes.</p>
+    <h3>¿Para qué se normaliza?</h3>
+    <p>Evitar la redundancia de los datos (datos iguales).
+        Los datos redundantes desperdician el espacio de disco y crean problemas de mantenimiento.
+        Evitar problemas de actualización de los datos en las tablas.
+        Proteger la integridad de los datos.
+    </p>
+    <h3>¿Para qué se usan?</h3>
+    <p>Para corregir errores en el diseño de la base de datos.
+        Mientras se puedan aplicar más de estas reglas o formas normales a una tabla, habrá menos anomalías o errores lógicos al momento de efectuar el diseño de nuestras tablas.
+        Si decide infringir una de las tres primeras reglas de la normalización, asegúrese de que su aplicación se anticipa a los problemas que puedan aparecer, como la existencia de datos redundantes y de dependencias incoherentes.
+    </p>
+    <h3>Forma Normal</h3>
+    <p>Regla que define una característica que una relación debe cumplir.</p>
+    <img src="./img/img21.png" alt="">
+    <h3>Forma normal 1</h3>
+    <p>Una relación está en FN1 si y solo si todos los atributos son atómicos.
+        Además, debe haber solo una llave primaria.
+        Un atributo es atómico si representa solo un valor.
+        No deben existir más valores en el campo de la tabla.
+        Si existen, se eliminan y se emplean en nuevas relaciones. 
+    </p>
+    <img src="./img/img22.png" alt="">
+    <img src="./img/img23.png" alt="">
+    <h3>Forma normal 2</h3>
+    <p>Una relación está en FN2 si y solo si está en FN1 y todos los atributos no clave son completamente dependientes de la llave primaria.
+        Si un atributo no clave depende de otro atributo no clave, se debe separar en una nueva relación.
+    </p>
+    <img src="./img/img24.png" alt="">
+    <img src="./img/img25.png" alt="">
+    <img src="./img/img26.png" alt="">
+    <h3>Forma normal 3</h3>
+    <p>Una relación está en FN3 si y solo si está en FN2 y todos los atributos no clave son independientes entre sí.
+        Si un atributo no clave depende de otro atributo no clave, se debe separar en una nueva relación.
+    </p>
+    <img src="./img/img27.png" alt="">
+    <img src="./img/img28.png" alt="">
+    <img src="./img/img29.png" alt="">
+    <h3>Forma Normal de Boyce-Codd</h3>
+    <p>Una relación esta en FNBC si y solo si todos sus determinantes son llaves de la relación.
+        Un elemento es determinante cuando un atributo determina a otro (A->C).
+        Si se demuestra que la relación esta en FNBC, tiene que estar en FN2.
+    </p>
+    <img src="./img/img30.png" alt="">
+    <h2>Laboratorio Clase 10 - Ejercicios Workbench y Normalización</h2>
+    <p>Se hace el proceso de normalización</p>
+    <img src="./img/img31.png" alt="">
+    <h2>Tarea (Individual) - Trasladar la 3era Forma Normal a Workbench</h2>
+    <p>Crear un Diagrama Entidad Relación a partir de la 3era Forma Normal donde se realiza la Facturación de una empresa con sus relaciones completas todo esto trabajado en Excel y Workbench</p>
+    <img src="./img/img32.png" alt="">
+    <h2>Laboratorio Clase - Ficha Bibliográfica</h2>
+    <p>Buscar un ejemplo de una Ficha Bibliográfica y desarrollar lo siguiente:
+        Normalización (Excel)
+    </p>
+    <img src="./img/img33.png" alt="">
+    <p>Diagrama ER (WorkBench)</p>
+    <img src="./img/img34.png" alt="">
+    <p>Script Base de Datos (WorkBench)</p>
+    <p>Creación de la base de datos, inserción de información (PHPMyAdmin)</p>
+    <img src="./img/img35.png" alt="">
+    <img src="./img/img36.png" alt="">
+    <img src="./img/img37.png" alt="">
+    <img src="./img/img38.png" alt="">
+    <p><a href="index.html">...Volver</a></p>
+</body>
+</html>

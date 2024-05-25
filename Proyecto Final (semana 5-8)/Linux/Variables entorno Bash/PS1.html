@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../Comandos populares/stylo.css">
+    <title>PROYECTO FINAL</title>
+</head>
+<body>
+    <h1>PS1</h1>
+    <p>Almacena la estructura del prompt principal del usuario.
+    Permite una serie de macros.</p>
+    <p>Ejemplos:</p>
+    <ul>
+        <li>\d : contiene la fecha del sistema.</li>
+        <li>\h : contiene el nombre de la máquina.</li>
+        <li>\T : contiene la hora del sistema.</li>
+        <li>\u : contiene el login del usuario.</li>
+        <li>\w : contiene el nombre completo del directorio de trabajo actual.</li>
+        <li>\W : contiene la base del nombre del directorio actual (Ejemplo: para
+            /home/pepe/doc la base es doc).</li>
+        <li>\$ : si el ID del usuario es 0 (root) contiene el valor # y sino, $.</li>
+        <li>\# : contiene el número del comando actual desde la creación del shell.</li>
+        <li>El prompt principal por defecto tiene la forma: "[\u@\h \W]\$ "</li>
+    </ul>
+    <p>Ejemplo:</p>
+    <p>$ export PS1="[\T,\u\#]\$ "
+    [14:12:15,pepe 315]$</p>
+    <p><a href="../Linux.html">Volver</a></p>
+    <p>Conoce más variables del entorno Bash:</p>
+    <ul>
+        <li><a href="./PATH.html">PATH</a></li>
+        <li><a href="./USER.html">USER</a></li>
+        <li><a href="./PAGER.html">PAGER</a></li>
+        <li><a href="./HOME.html">HOME</a></li>
+        <li><a href="./EDITOR.html">EDITOR</a></li>
+        <li><a href="./PS1.html">PS1</a></li>
+        <li><a href="./PS2.html">PS2</a></li>
+        <li><a href="./HISTFILE.html">HISTFILE</a></li>
+        <li><a href="./PWD.html">PWD</a></li>
+        <li><a href="./SECONDS.html">SECONDS</a></li>
+    </ul>
+</body>
+</html>

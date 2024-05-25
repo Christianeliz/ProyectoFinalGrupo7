@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../stilo2.css">
+    <title>PROYECTO FINAL</title>
+</head>
+<body>
+    <h2>Preparando un sistema para las pruebas</h2>
+    <img src="./img/1.png" alt="">
+    <p>Con esto ya tenemos nuestro sistema preparado para empezar con las pruebas de cambios de permisos.</p>
+    <br>
+
+    <h2>Obtener información de ficheros y carpetas</h2>
+    <img src="./img/2.png" alt="">
+    <img src="./img/3.png" alt="">
+    <p>Este comando ofrece la siguiente información (en orden de izquierda a derecha):</p>
+    <ul>
+        <li>Tipo de archivo (archivo muestra «-» y directorio muestra una «d»).</li>
+        <li>Permisos de lectura, escritura y ejecución, tanto para usuario, grupo y otros.</li>
+        <li>Usuario propietario.</li>
+        <li>Grupo propietario del archivo.</li>
+        <li>Tamaño</li>
+        <li>Última fecha de modificación.   </li>
+        <li>Nombre</li>
+    </ul>
+    <p>Una vez que ya hemos creado la carpeta y archivos, así como hemos visto la salida del comando «ls -l», vamos a interpretar los permisos que tienen los ficheros o carpetas.</p>
+    <br>
+
+    <h2>Interpretar los permisos que tiene un fichero o carpeta</h2>
+    <p>Anteriormente habéis visto que los diferentes archivos tienen estos permisos:</p>
+    <img src="./img/4.png" alt="">
+    <p>En el anterior ejemplo, tenemos los permisos «drwxr-xr-x», esto significa lo siguiente:</p>
+    <ul>
+        <li>d: directorio</li>
+        <li>rwx: permisos de lectura, escritura y ejecución para el usuario propietario del directorio.</li>
+        <li>r-x: permisos de lectura y ejecución para el grupo propietario del directorio.</li>
+        <li>r-x: permisos de lectura y ejecución para otros del directorio.</li>
+    </ul>
+    <img src="./img/5.png" alt="">
+    <br>
+
+    <h2>Cómo cambiar los permisos de archivos y carpetas</h2>
+    <p>El comando que debemos utilizar para realizar esta tarea es chmod, esta será la herramienta con el que podremos añadir o quitar permisos, tanto a un archivo como a una carpeta existente en el sistema de fichero de nuestro sistema operativo. Para realizar esta configuración con chmod, podremos realizarlo de dos formas diferentes, utilizando letras que es más «humano» pero más largo, y también números en formato «octal», que es mucho más rápido. Esta última forma es nuestra favorita por la rapidez, aunque, es posible que en un primer momento te guste más utilizar letras, porque se entiende mucho mejor.</p>
+    <p>Los sistemas de archivos de Unix, servidores Linux, cada archivo cuenta con sus permisos los cuales se regulan en base a tres clases:</p>
+    <ul>
+        <li>Propietario (User): De forma general cualquier usuario que crea un archivo en el sistema, se define como propietario de forma automática. Esto se puede modificar con el comando chown.</li>
+        <li>Grupo (Group): Este se encarga de agrupar a varios usuarios. Aquí cada cuenta funciona a modo de subordinada al grupo inicial de forma automática, pero a la vez los usuarios pueden pertenecer a más grupos.</li>
+        <li>Otros usuarios (Other): Se encarga de comprender a los usuarios que no son propietarios de ningún archivo, ni forman parte de ningún grupo.</li>
+    </ul>
+    <br>
+
+    <h2>Letras</h2>
+    <p>En este modo se asignan letras a todas las clases de usuarios y a todos los permisos de accesos posibles. Si se combinan, estos pueden definirse de forma sencilla en cuanto a los permisos que otorgar o retirar, y a que usuarios. Si vas a utilizar letras para añadir o quitar permisos de una carpeta o archivo, debemos tener en cuenta los roles, símbolos y los permisos. Existen tres tipos de roles:</p>
+    <ul>
+        <li>u: usuario</li>
+        <li>g: grupo</li>
+        <li>o: otros</li>
+        <li>a: todos (all), si necesitas aplicar el mismo permiso a usuario, grupos y otros, usa «a» para ahorrar tiempo.</li>
+    </ul>
+    <p><b>Dos tipos de símbolos, </b>que usaremos si la asignación de los permisos se realiza en modo simbólico, para vincular estos a los usuarios se usarán los siguientes símbolos.</p>
+    <ul>
+        <li>+: añadir permisos</li>
+        <li>-: quitar permisos</li>
+        <li>=: especifica los permisos fijados.</li>
+    </ul>
+    <p><b>Tres tipos de permisos</b>que podemos asignar a los usuarios.</p>
+    <ul>
+        <li>r: lectura: Permite a los usuarios la lectura de un determinado archivo o directorio.</li>
+        <li>w: escritura: Da al usuario la posibilidad de modificar el archivo sobre el cual se le han dado permisos.</li>
+        <li>x: ejecución: Otorga la posibilidad de ejecutar un archivo.</li>
+    </ul>
+    <p>A continuación, os ofrecemos una serie de ejemplos para que veáis de qué estamos hablando:</p>
+    <img src="./img/6.png" alt="">
+    <br>
+
+    <h2>Basado en octal usando números</h2>
+    <p>El comando chmod también es compatible con otra nomenclatura que os vamos a enseñar y que está basada en octal.
+    Imaginad que los permisos del propietario (r w x) están identificados por 0 y 1. Es decir, si por ejemplo queremos dar permisos de lectura y escritura solamente (y no permisos de ejecución) sería: 110. Si queremos solo el permiso de lectura sería: 100.</p>
+    <p>Por lo tanto, teniendo en cuenta todas las posibilidades existentes obtenemos los siguientes valores:</p>
+    <ul>
+        <li>0 0 0: 0</li>
+        <li>0 0 1: 1</li>
+        <li>0 1 0: 2</li>
+        <li>0 1 1: 3</li>
+        <li>1 0 0: 4</li>
+        <li>1 0 1: 5</li>
+        <li>1 1 0: 6</li>
+        <li>1 1 1: 7</li>
+    </ul>
+    <p>Es decir, esto es algo extrapolable tanto al usuario, grupo como a otros.</p>
+    <img src="./img/7.png" alt="">
+    <img src="./img/8.png" alt="">
+    <br>
+
+    <h2>Otras opciones de chmod</h2>
+    <p>Independientemente de si usamos la notación simbólica o la octal, los usuarios tendrán a su disposición una amplia lista de opciones en lo que se refiere a la asignación de los derechos de acceso a los archivos y diferentes directorios. Estos se insertan en la línea de comandos entre el comandó en sí y los permisos o modos. Estas opciones pueden ser:</p>
+    <ul>
+        <li>R: Recursive. Este cambio de derechos se aplicará a todos los archivos y directorios dentro de una misma carpeta.</li>
+        <li>-v: Verbose. Después de ejecutar un comando, se ejecutará un análisis de todos los archivos que se procesaron en la asignación.</li>
+        <li>-c: Changes. Esta opción hace que se muestre un diagnóstico, pero solo para los archivos que sufrieron algún tipo de modificación.</li>
+        <li>-f: Silent. Se silenciarán todos los mensajes de error.</li>
+    </ul>
+    <img src="./img/9.png" alt="">
+    <br>
+
+    <h2>Más comandos para Linux</h2>
+    <p>Además de la anterior opción chmod para Linux, hay otras dos opciones más que están disponibles. Estos comandos que verás a continuación cumplen otras funciones. Por lo que también tendrás disponible una explicación clara de qué son y, sobre todo, ejemplos para que puedas ponerlos en práctica.</p>
+    <h3>Qué es el comando chown</h3>
+    <p>Como has podido ver, los archivos o directorios de Linux tienen un propietario asignado, y para cambiar esto está el comando chown. Este se trata de una abreviatura de «change owner» (Cambiar de propietario). Esta se encuentra disponible con varias utilidades para los superusuarios, de forma que se puede cambiar la propiedad del contenido que se encuentre en el equipo o sistema.</p>
+    <h3>Para qué sirve</h3>
+    <img src="./img/10.png" alt="">
+    <p>Además, en el momento de comprobar que el cambio de propiedad se ha realizado correctamente, se puede usar el comando ls -l. Además de que el propio comando se puede modificar para cambiar la propiedad y el grupo. Al igual que hay que tener en cuenta que no solo se puede dar uso a este comando para archivos, también para directorios, tanto para modificar únicamente el propietario en sí como el grupo o ambos. Y no hay que olvidar que esta opción se puede utilizar para enlaces simbólicos o blandos. Por lo que las alternativas que ofrece son variadas.</p>
+    <br>
+
+    <h2>Comando chgrp</h2>
+    <p>Este comando es similar a chown, pero nos permite realizar el cambio de grupo propietario, lo cual también podemos hacer con chown, como veremos más adelante. Es decir, en vez de cambiar los permisos, este comando permite modificar por nuestra cuenta el propietario o el grupo al que pertenece cualquiera de esto.
+    Aunque, al igual que ocurre con el anterior, si realizamos el cambio de grupo propietario de un archivo o fichero, el usuario propietario no cambiar</p>
+    <p>Para poner a prueba esto mismo, ten en cuenta que esto se puede realizar de la siguiente forma:</p>
+    <img src="./img/11.png" alt="">
+    <p>Por otro lado, también se puede modificar el grupo de un archivo o directorio al usar el comando "chgrp groupname archivo". Ten en cuenta que "groupname" se tiene que cambiar por el nombre que se quiera añadir y "archivo" por el que tiene el fichero o directorio en cuestión.</p>
+    <p>Además de las anteriores opciones, lo cierto es que este comando tiene otra serie de funciones avanzadas que se pueden aprovechar como es el caso de:</p>
+    <ul>
+        <li>-h: con esta opción tienes la oportunidad de modificar el grupo de los enlaces simbólicos en vez del archivo o directorio al que están enlazados en ese momento.</li>
+        <li>-from: en este caso, al usar esta opción más avanzada puedes modificar el grupo solamente si ya forma parte de un grupo específico.</li>
+        <li>-reference: podrás cambiar el grupo de un directorio o archivo que esté basado en las propiedades de otro archivo o directorio.</li>
+    </ul>
+    <p>Por tanto, queda claro que este comando en particular de Linux ofrece diferentes alternativas con las que es posible modificar cuando sea necesario el grupo de un directorio o archivo. Y es que, tanto a través de su sintaxis básica como de las opciones más avanzadas, se ofrece al usuario una herramienta realmente útil para que se pueda tener un mayor control sobre los permisos de acceso.</p>
+    <p><a href="../Virtualización/virtual box.html">Volver</a></p>
+
+
+
+
+
+
+</body>
+</html>

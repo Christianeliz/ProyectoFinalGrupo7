@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="../stilo2.css">
+    <title>PROYECTO  FINAL</title>
+</head>
+<body>
+    <h1>Linux</h1>
+    <h2>¿Que es linux?</h2>
+    <p>Es un sistema operativo (SO) open source. En 1991, Linus Torvalds lo diseñó y creó a modo de pasatiempo. Mientras estaba en la universidad, intentó crear una versión open source, alternativa y gratuita del sistema operativo MINIX, que a su vez se basaba en los principios y el diseño de Unix. Ese pasatiempo logró convertirse en el SO con la mayor base de usuarios, el más usado en los servidores de Internet disponibles públicamente y en el único utilizado en las 500 supercomputadoras más rápidas.
+    Quizá lo mejor de Linux es que es open source. Linux se lanzó en virtud de la Licencia Pública General de GNU (GPL), así que cualquier persona puede ejecutar el software, estudiarlo, compartirlo y modificarlo. El código modificado también se puede redistribuir e incluso vender, pero todo esto se debe hacer con la misma licencia. Esta es una de las principales diferencias con los sistemas operativos tradicionales (por ejemplo, Unix y Windows), los cuales son propietarios, están bloqueados, 
+    se distribuyen tal como están y no se pueden modificar.</p>
+    <br>
+
+    <h2>Algunos comandos básicos </h2>
+    <p>Algunos de ellos como man, Is, chmod y umask ya han sido
+        referenciados, otros se mencionarán más adelante en
+        dependencia de los temas que se traten. Muchos de estos
+        comandos están presentes también en los sistemas Unix
+        aunque a veces varían sus opciones y argumentos en
+        dependencia de las versiones. Por esto no puede encontrarse
+        una documentación que diga la última palabra respecto a uno
+        u otro comando, la práctica es la mejor forma de comprobar
+        como funciona cada uno. Para su mejor comprensión los
+        clasificamos en diferentes categorías.</p>
+    <br>
+
+    <h2>Existen categoriás de comandos</h2>
+    <ul>
+        <li>Comandos para manipular ficheros y directorios</li>
+        <li>Comandos para paginar, visualizar y editar ficheros</li>
+        <li>Comandos para hacer búsquedas de ficheros y patrones</li>
+        <li>Comandos para filtrar ficheros</li>
+        <li>Comandos para compactar y agrupar ficheros</li>
+        <li>Comandos para la comunicación entre usuarios</li>
+        <li>Comandos para desconectarse del sistema</li>
+        <li>Comandos para administrar usuarios y grupos</li>
+        <li>Comandos variados</li>
+    </ul>
+    <br>
+    <h2>Comandos</h2>
+    <p>Es una utilidad que realiza una serie de pruebas (test) para determinar el tipo y formato de un archivo. Más precisamente las pruebas son tres, y la primera que permita alcanzar un resultado hace que el análisis finalice.
+
+        Se detallan a continuación dichas pruebas, en el orden en que se llevan a cabo por este comando:
+    </p>  
+        <p>1. Sistema de archivos: se intenta determinar si el archivo a examinar es un archivo del sistema por medio de la función (system call) stat. Gracias a esta prueba se puede determinar si es un dispositivo, enlace simbólico, una tubería, etc.</p>
+        <p>2. Números mágicos: Se intenta determinar el tipo, analizando determinados bytes ubicados en específicas posiciones dentro del archivo. Estos bytes se los denomina números mágicos, y suelen estar al comienzo de la cabecera. La información para realizar dicho análisis figura en el archivo /usr/share/misc/magic.mgc.</p>
+        <p>3. Prueba de sintaxis: esta última prueba consiste en determinar que tipo de sintaxis posee un archivo de texto. Esta prueba solo se realiza sobre los archivos que se haya determinado que sean texto plano. Básicamente consiste en buscar la presencia de determinadas palabras claves que permiten identificar la sintaxis usada dentro de dicho archivo.</p>
+        <br>
+
+    <p>Comandos para visualizar, paginar y editar ficheros y directorios:</p>
+    <ul>
+        <li>Comando Is</li>
+        <li>Comando cd</li>
+        <li>Comando pwd</li>
+        <li>Comando mkdir</li>
+        <li>Comando mv</li>
+        <li>Comando cp</li>
+        <li>Comando rm</li>
+        <li>Comando chown</li>
+        <li>Ayuda en el sistema</li>
+    </ul>
+    <p>Comandos para visualizar, paginar y editar ficheros:</p>
+    <ul>
+        <li>Comando cat</li>
+        <li>Editor pico</li>
+        <li>Editor vi</li>
+        <li>Comandos more y less</li>
+        <li>Ayuda en el sistema</li>
+    </ul>
+    <p>Comandos para busquedas de ficheros y patrones:</p>
+    <ul>
+        <li>Comando grep</li>
+        <li>Comando find</li>
+        <li>Comando locate</li>
+        <li>Ayuda en el sistema</li>
+    </ul>
+    <p>Comandos para filtrar ficheros:</p>
+    <ul>
+        <li>Comando file</li>
+        <li>Comando sort</li>
+        <li>Comando uniq</li>
+        <li>Comando tail y head</li>
+        <li>Comando wc</li>
+        <li>Comando stat</li>
+        <li>Ayuda en el sistema</li>
+    </ul>
+    <p>Comandos para compactar y agrupar ficheros:</p>
+    <ul>
+        <li>Comando gzip y gunzip</li>
+        <li>Comando tar</li>
+        <li>Ayuda en el sistema</li>
+    </ul>
+    <p>Comandos para la comunicación entre usuarios:</p>
+    <ul>
+        <li>Comando write</li>
+        <li>Comando wall</li>
+        <li>Comando  talk</li>
+        <li>Ayuda en el sistema</li>
+    </ul>
+    <p>Comandos para desconectarse del sistema:</p>
+    <ul>
+        <li>Comando exit</li>
+        <li>Comando  logout</li>
+        <li>Ayuda en el sistema</li>
+    </ul>
+    <p>Comandos para administrar usuarios y grupos:</p>
+    <ul>
+        <li>Comando useradd</li>
+        <li>Comando  userdel</li>
+        <li>Comando passwd</li>
+        <li>Comando  usermod</li>
+        <li>Comando chfn</li>
+        <li>Comando  groupadd y groupdel</li>
+        <li>Comando groupmod</li>
+        <li>Comando  gpasswd</li>
+        <li>Comando su</li>
+        <li>Comando  newgrp</li>
+        <li>Ayuda en el sistema</li>
+    </ul>
+    <p>Comandos variados:</p>
+    <ul>
+        <li>Comando echo</li>
+        <li>Comando alias</li>
+        <li>Comando type</li>
+        <li>Comando tty</li>
+        <li>Comando du</li>
+        <li>Comando id</li>
+        <li>Comando who</li>
+        <li>Comando w</li>
+        <li>Comando finger</li>
+        <li>Comando ping</li>
+        <li>Comando ifconfig</li>
+        <li>Ayuda en el sistema</li>
+    </ul>
+    <p>Comandos para la comunicación entre usuarios:</p>
+    <ul>
+        <li>Comando wall</li>
+        <li>Comando  talk</li>
+        <li>Ayuda en el sistema</li>
+    </ul>
+    <br>
+
+    <h2>Flujo de datos</h2>
+    <p>Todos los procesos (programas en ejecución) tienen
+        asociados tres flujos (streams) de datos principales.
+        Estos son:</p>
+    <p>+ La entrada estándar. Es donde puede tomar los datos que
+        maneja y que no se indican mediante argumentos u
+        opciones. Por defecto se toma a partir del teclado.</p>
+        <p>+ La salida estándar. Es donde un proceso escribe los
+        resultados de su ejecución. Por defecto es la terminal donde
+        se invocó el programa correspondiente.</p>
+        <p>+ La salida de errores. Es donde un proceso escribe los
+        posibles errores durante su ejecución. Por defecto es la
+        terminal donde se invocó el programa correspondiente.</p>
+    <br>
+
+    <p>Los flujos de datos se almacenan en
+    descriptores de ficheros que se identifican por
+    un número en la forma siguiente:</p>
+    <p>+ 0: representa la entrada estándar.</p>
+    <p>+ 1: representa la salida estándar.</p>
+    <p>+ 2: representa la salida de errores.</p>
+    <br>
+
+    <h2>Redireccionamiento</h2>
+    <p>- En bash los flujos de datos se pueden redireccionar libremente
+        hacia distintos ficheros. En esencia este mecanismo consiste
+        en que la salida de un proceso (estándar o de errores) puede
+        escribirse en un fichero en lugar de la terminal asociada, así
+        como la entrada puede tomarse también a partir de un fichero
+        en lugar de utilizar lo escrito mediante el teclado.</p>
+    <p>- Para indicar un redireccionamiento se utilizan los signos de
+    comparación "y". De esta forma se generan dos tipos de construcción:</p>
+    <ul>
+         <li>[x](signo mayor que)salida: indica el redireccionamiento del flujo de datos x al
+            fichero nombrado salida. De no indicarse x se asumirá la salida
+            estándar del programa que se haya invocado, o sea, 1.</li>
+        <li>[x](signo menor que)entrada: indica el redireccionamiento del contenido del
+            fichero nombrado entrada hacia flujo de datos x. De no
+            indicarse x se asumirá la entrada estándar del comando que
+            se haya invocado, o sea, 0.</li>
+    </ul>
+    <p><a href="./ejemplo redirección.html">Ejemplos:</a></p>
+    <br>
+
+    <h2>Tuberías. pipes</h2>
+    <p>- Son un poderoso mecanismo del shell, permite tomar la salida
+        de un comando y pasársela como entrada a otro.</p>
+    <p>- Muchos de los comandos mencionados anteriormente, que
+        reciben como argumento un fichero, en caso de omitirse este,
+        utilizan su entrada estándar. Esta entrada puede provenir a su
+        vez de la salida de otros comandos. Lo que permite realizar
+        diversos tipos de filtrado.</p>
+    <p>- Pueden estar formadas por un número ilimitado de comandos.
+        Estos no se ejecutan secuencialmente, o sea no se espera a
+        que termine uno para ejecutar el siguiente, sino que se va
+        haciendo de forma concurrente. El caracter que se emplea
+        para separar un comando de otro mediante una tubería es |.</p>
+        <p><a href="./tubería.html">Ejemplos:</a></p>
+    <br>
+    
+    <h2>Entorno de trabajo Bash</h2>
+    <p>Un entorno de trabajo en Linux no es más que la
+        configuración que posee un usuario durante su
+        interacción con el sistema y más específicamente con
+        el shell. Las características del entorno para el caso
+        de bash pueden ser la forma en que se muestra el
+        prompt, los alias y funciones definidos y las variables
+        del entorno de forma general, ya que estas definen el
+        comportamiento de muchos programas y comandos.
+        Las facilidades para cambiar el entorno de trabajo
+        dependen de las capacidades del shell que se utilice.</p>
+    <br>
+
+    <h2>Variables de entorno</h2>
+    <p>- Almacenan valores que describen las propiedades del entorno
+        de trabajo. Un usuario puede definir sus propias variables o
+        modificar las ya existentes.</p>
+    <p>- Para asignarle valor a una variable en el shell se emplea el
+        operador = entre el nombre de la variable y el valor asignado
+        (no deben haber espacios intermedios).</p>
+    <p>- Ejemplo: $ MENSAJE="Hola amigo"</p>
+    <p>- Para acceder al valor de una variable se emplea el caracter $
+        seguido por el nombre de la variable. Para imprimir en la
+        terminal el valor de una variable se puede utilizar el comando
+        echo.</p>
+    <p>- Ejemplo: $ echo $MENSAJE
+        Hola amigo</p>
+    <p>- Almacenan valores que describen las propiedades del entorno
+        de trabajo. Un usuario puede definir sus propias variables o
+        modificar las ya existentes.</p>
+    <p>- Para asignarle valor a una variable en el shell se emplea el
+        operador = entre el nombre de la variable y el valor asignado
+        (no deben haber espacios intermedios).</p>
+    <p>- Ejemplo: $ MENSAJE="Hola amigo"</p>
+    <p>- Para acceder al valor de una variable se emplea el caracter $
+        seguido por el nombre de la variable. Para imprimir en la
+        terminal el valor de una variable se puede utilizar el comando
+        echo.</p>
+    <p>- Ejemplo: $ echo $MENSAJE Hola amigo</p>
+    <p>- Para ver las variables del entorno definidas se puede
+        emplear el comando set. Este además se relaciona
+        con las opciones que es otra forma de regir el
+        comportamiento del shell. Las opciones se activan
+        (on) o desactivan (off). Estas se utilizan para indicar
+        propiedades del shell muy específicas por lo que no
+        nos vamos a detener en ellas. Si se desea conocer
+        más al respecto se puede hacer $ help set | less.</p>
+    <p>- Para eliminar el valor de una variable se emplea el
+        comando unset.</p>
+        <p>- Ejemplo: + $ unset MENSAJE</p>
+    <br>
+
+    <h2>Variables del entorno Bash:</h2>
+    <ul>
+        <li><a href="./Variables entorno Bash/PATH.html">PATH</a></li>
+        <li><a href="./Variables entorno Bash/USER.html">USER</a></li>
+        <li><a href="./Variables entorno Bash/PAGER.html">PAGER</a></li>
+        <li><a href="./Variables entorno Bash/HOME.html">HOME</a></li>
+        <li><a href="./Variables entorno Bash/EDITOR.html">EDITOR</a></li>
+        <li><a href="./Variables entorno Bash/PS1.html">PS1</a></li>
+        <li><a href="./Variables entorno Bash/PS2.html">PS2</a></li>
+        <li><a href="./Variables entorno Bash/HISTFILE.html">HISTFILE</a></li>
+        <li><a href="./Variables entorno Bash/PWD.html">PWD</a></li>
+        <li><a href="./Variables entorno Bash/SECONDS.html">SECONDS</a></li>
+    </ul>
+    <br>
+
+    <h2>Ficheros y perfiles </h2>
+    <ul>
+        <li>Para cada usuario existen tres ficheros muy importantes que permiten definir en
+            gran medida las características del shell durante la interacción con este. Estos
+            constituyen shells scripts y se conocen como ficheros perfiles o profiles:</li>
+        <li>a- bash_profile: se ejecuta siempre que se abra una nueva sesión en el sistema.
+            Cada vez que un usuario se conecte al sistema se ejecutará el script .bash_profile,
+            en el caso de que se utilice a bash como shell. Para ser compatible con sus
+            versiones anteriores, bash en caso de que no existiera .bash_profile, ejecuta
+            .bash_login, o sino, .profile. En este fichero se pueden colocar las asignaciones a las
+            variables del entorno siendo debidamente exportadas a través de export. También
+            se puede establecer la máscara de permisos usando umask. Existe además un
+            profile general ubicado en /etc/profile que se ejecuta también siempre que un
+            usuario inicia una sesión en el sistema antes de su profile particular.</li>
+        <li>b- .bash_logout: se ejecuta al terminar una sesión de trabajo. Puede contener
+            comandos para salvar lo hecho durante la sesión.</li>
+        <li>c-.bashrc: se ejecuta siempre que se invoque un nuevo shell. Por lo general en él
+            se colocan las definiciones de funciones y los alias de comandos. El fichero .bashrc
+            que posee cada usuario por defecto ejecuta primero a /etc/bashrc.
+             Cuando se crea un nuevo usuario se le colocan en su directorio base estos tres
+            ficheros cuyos patrones están el directorio /etc/skel.</li>
+    </ul>
+    <h2>Ejecución en Bash</h2>
+    <p>Existen dos formas de ejecurar un shell script en el bash:</p>
+    <p>+ Invocándolo directamente por su nombre. Para esto el camino al fichero
+        que lo representa debe encontrarse en la variable PATH del entorno,
+        sino será necesario especificar el camino completo del fichero o relativo
+        al directorio actual. El fichero debe además, poseer los permisos de
+        ejecución adecuados. Lo que ocurrirá en este caso es que se creará un
+        shell hijo que será el que realmente ejecute (interprete) al script.</p>
+    <p>Utilizando el comando source. De esta forma se ejecutará el script en el
+        shell actual. En este caso no será necesario que el fichero
+        correpondiente posea permisos de ejecución. El comando se puede
+        sustituir por el caracter punto. Por ejemplo, si se modificara el
+        .bash_profile no será necesario, para activar los cambios,
+        desconectarse y conectarse nuevamente al sistema, simplemente se
+        puede hacer:</p>
+        <ul>
+            <li>$ source .bash_profile ó $ . .bash_profile</li>
+            <li>Un ejercicio interesante puede ser hacer un shell
+                script (editar un fichero) llamado program.sh con la
+                siguiente línea: echo $SECONDS</li>
+            <li>Ejecutar luego:
+                $ . program.sh</li>
+            <li>Por último asignarle al fichero permisos de ejecución
+                para ejecutarlo de la forma tradicional:
+                $ chmod +x program.sh
+                $ ./program.sh</li>
+        </ul>
+    <br>
+
+    <h2>Comandos populares de Linux</h2>
+    <ul>
+        <li><a href="./Comandos populares/ComIs.html">Comando Is</a></li>
+        <li><a href="./Comandos populares/ComPWD.html">Comando pwd</a></li>
+        <li><a href="./Comandos populares/Com Cd.html">Comando cd</a></li>
+        <li><a href="./Comandos populares/Com Mkdir.html">Comando mkdir</a></li>
+        <li><a href="./Comandos populares/Com Rmdir.html">Comando rmdir</a></li>
+        <li><a href="./Comandos populares/Com rm.html">Comando rm</a></li>
+        <li><a href="./Comandos populares/Com cp.html">Comando cp</a></li>
+        <li><a href="./Comandos populares/Com mv.html">Comando mv</a></li>
+        <li><a href="./Comandos populares/Com Touch.html">Comando touch</a></li>
+        <li><a href="./Comandos populares/Com File.html">Comando file</a></li>
+        <li><a href="./Comandos populares/Com Zip.html">Comandos zip y unzip</a></li>
+        <li><a href="./Comandos populares/Com Tar.html">Comando tar</a></li>
+        <li><a href="./Comandos populares/Com nano.html">Comandos nano, vi y jed</a></li>
+        <li><a href="./Comandos populares/Com Cat.html">Comando cat</a></li>
+        <li><a href="./Comandos populares/Com  Grep.html">Comando grep</a></li>
+        <li><a href="./Comandos populares/Com Sed.html">Comando sed</a></li>
+        <li><a href="./Comandos populares/Com Head.html"><a href="">Comando head</a></a></li>
+        <li><a href="./Comandos populares/Com Tail.html">Comando tail</a></li>
+        <li><a href="./Comandos populares/Com Awk.html">Comando awk</a></li>
+    </ul>
+<br>
+
+<h2>Laboratorio clase 3</h2>
+<p><a href="../Linux/LabClase3.html">Estructura de carpetas</a></p>
+<br>
+
+<h2>Tarea (individual) informal</h2>
+<p><a href="../Linux/PP2.html">Monitor de eventos de Windows</a></p>
+<br>
+
+<h2>Terminal virtual de Linux</h2>
+<p><a href="../../Pagina Principal.html">Volver</a></p>
+
+
+
+
+</body>
+</html>

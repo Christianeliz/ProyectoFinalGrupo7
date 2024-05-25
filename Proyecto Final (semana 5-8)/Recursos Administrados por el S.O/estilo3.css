@@ -1,0 +1,81 @@
+#tablacontenido1 {
+    background-color: #f0f0f0; 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin-top: 20px; 
+}
+
+#tablacontenido1 table {
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+#tablacontenido1 th, #tablacontenido1 td {
+    padding: 10px;
+    border: 1px solid #ccc; 
+}
+
+#tablacontenido1 img {
+    display: block; 
+    margin: 0 auto; 
+}
+
+h1 {
+    color: rgb(23, 32, 42);
+    font-family: Trebuchet MS;
+    text-align: center;
+    background-color: #ffcc00; /* Cambia el color de fondo según tu preferencia */
+    padding: 10px; /* Añade espacio interno al título para separarlo del fondo */
+    border-radius: 20px; /* Aplica bordes redondeados al título */
+    border: 4px solid #333; /* Agrega un borde en la parte inferior del título */
+}
+h1:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0,0,0,4) ;
+    transform: translateY(-3%);
+}
+
+p {
+    font-family: Arial;
+    background-color: rgba(255, 204, 0, 0.295); /* Fondo difuminado con color #ffcc00 y opacidad del 80% */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Borde de 1 píxel sólido */
+    margin: 0; /* Elimina el margen que separa los párrafos */
+    text-align: center;
+}
+h2{
+    text-align: center;
+    background-color: rgba(250, 210, 52, 0.295);
+}
+/* Estilos para la lista */
+ul {
+    list-style-type: none; /* Quita los puntos predeterminados de la lista */
+    padding: 0; /* Elimina el relleno predeterminado de la lista */
+}
+
+.container{
+   width: 100%;
+    display: flex;
+   
+    
+}
+.card{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #ffff;
+    box-shadow: 0px 1px 10px rgba(0, 0,0,2);
+    cursor: default;
+    transition: all 400ms ease;
+
+}
+
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0,0,0,4) ;
+    transform: translateY(-3%);
+}
+.card img{
+    width: 100%;
+    height: 210px;
+}

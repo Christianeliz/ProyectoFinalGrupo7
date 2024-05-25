@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../stilo.css">
+    <title>PROYECTO FINAL</title>
+</head>
+<body>
+    <h1>CMD-Comandos básicos en redes</h1>
+    <p>La conectividad a la red ya no es un lujo sino más bien un requisito para poder continuar con nuestras tareas diarias. Hoy en RedesZone os vamos a hacer un completo recopilatorio de todos los comandos básicos de redes para Windows 10. Estos comandos básicos de gestión de red van a convertirse en tu aliado a la hora de resolver cualquier inconveniente con la conexión a Internet.</p>
+    <h2>¿Qué es CMD? </h2>
+    <p>CMD es una interfaz de línea de comandos que se utiliza en los sistemas operativos de Microsoft. Esta herramienta, simula comandos al estilo MS-DOS, el cual es el sistema operativo basado en texto que teníamos previamente a las interfaces gráficas. Esto permite a los usuarios teclear comandos, en lugar de tener que utilizar la propia interfaz gráfica. De este modo, se puede interactuar con el sistema de una forma muy completa y eficiente. Los comandos permiten que los usuarios puedan navegar por el sistema de archivos del ordenador, abrirlos junto a los programas, manipularlos, y hasta ejecutar algunas tareas de administración de sistemas.
+        A pesar de los grandes avances en las interfaces gráficas, siendo cada vez más intuitivas, DMC sigue siendo una opción muy utilizada. Es considerada como una herramienta muy valiosa, sobre todo para los administradores de sistemas, desarrolladores, y usuarios más avanzados. Esto tiene un motivo, y es que permite realizar las tareas necesarias de una forma más rápida y sobre todo eficiente. Pero obviamente es necesario conocer los comandos que se pueden utilizar en CMD y cómo combinarlos con los demás parámetros que se escriban.</p>
+    <h2>PING</h2>
+    <p>Es uno de los comandos más básicos. Sin embargo, es uno de los más útiles si queremos tener mayor control de lo que ocurre con nuestra conectividad de red. ¿Qué información puedes saber? Si tu ordenador logra alcanzar o no un destino con determinada dirección IP, cuánto tiempo tarda (en milisegundos) en viajar un paquete de datos tanto a la ida como a la vuelta. A continuación, puedes ver cuál es la salida que se debe obtener si hacemos ping con éxito:</p>
+    <img src="../Comunicación de redes/img/22.png" alt="">
+    <p>Ten en cuenta que no solamente puedes hacer ping a una dirección IP sino un dominio. Si estás indicando un dominio válido o una dirección IP válida, el ping se dará con éxito e indicará «Reply from X.X.X.X» o «Respuesta desde X.X.X.X». Esa dirección IP, entonces, corresponde al dominio el cual indicamos al momento de hacer ping.
+        Ahora bien, si este comando no se ejecuta con éxito, puede ser porque no hemos indicado la dirección IP o dominio correctos o bien, no se encuentran disponibles y devuelven mensajes de error como «Host de destino inaccesible» o «Tiempo de respuesta agotado para esta solicitud«.</p>
+    <h2>Ipconfig uno de los comandos básicos fundamentales </h2>
+    <p>Muy probablemente, ya habrás utilizado este comando para tener información respecto a los datos de IP de tus distintas interfaces de red. Sin embargo, no sólo puedes consultar datos sino realizar ciertas acciones. Ahora bien, este sería la salida esperada:</p>
+    <img src="../Comunicación de redes/img/23.png" alt="">
+    <h2>Nslookup</h2>
+    <p>¡Un comando apto para curiosos! Mediante este comando, es posible saber a qué dirección de IP pertenece un determinado dominio, es decir, un sitio web. Sin embargo, de acuerdo a la infraestructura y necesidad de los sitios web, existen altas probabilidades de que la dirección de IP cambie cada vez que realizamos la consulta.</p>
+    <img src="../Comunicación de redes/img/24.png" alt="">
+<h2>Netstat</h2>
+<p>Se la considera como una herramienta básica de monitorización de red, ya sea para realizar diagnósticos o análisis. Aunque si eres un usuario particular, esto te puede servir más que nada para tener un panorama general acerca de las conexiones que estás teniendo actualmente, el protocolo que estás utilizando, la dirección local y remota, etc</p>
+<img src="../Comunicación de redes/img/24.png" alt="">
+<h2>Tracert</h2>
+<p>El objetivo de este comando es verificar los saltos que da el paquete de datos que se quiere enviar a determinado destino. Esos saltos corresponden al hecho de por cuáles routers pasa antes de llegar al servidor final. Es bastante eficaz pues te permite determinar con precisión en qué momento (o en qué servidor) el paquete ya no logra viajar al destino. Así, podremos apoyarnos en tracert si es que tenemos algún inconveniente con la conectividad como latencia alta.</p>
+<img src="../Comunicación de redes/img/25.png" alt="">
+<p>Vemos que cada salto se encuentra numerado para una mejor distinción. Así también vemos tres números de latencia en milisegundos, lo cual significa que por cada salto se envían 3 paquetes, por lo que cada uno de los tres tiempos, corresponde a cada paquete. Sin embargo, es mejor calcular el promedio de manera a tener datos más concretos acerca de la latencia, si así fuese necesario. En la última parte de cada salto vemos la dirección IP de cada servidor por el cual va pasando, incluyendo el router que es nuestro aliado para la salida a Internet. El salto que corresponde a nuestro router, es decir, nuestra puerta de enlace a Internet, es siempre el primero.</p>
+<h2>Pathping </h2>
+<p>Este nos ayuda a mantener un control sobre todos los puntos de la red, y no solo en los dispositivos de red, si no que en todo lo que ocurre de forma interna y externa con los paquetes de red. Como administradores podremos verificar que todos los paquetes son confiables y que las rutas sean las adecuadas. Mantener una correcta funcionalidad y comportamiento de la red, puede ser muy complicado, y además, depende de los demás procesos de la organización. Este comando, nos puede ayudar incluso si somos gamers, pues permite controlar la latencia que tienen las conexiones para ver una comunicación en concreto.
+    En esencia, muestra el mismo tipo de información que tracert pero mucho más detalladamente. ¿Qué significa esto? Que el comando puede demorar algo más de tiempo en terminar de ejecutarse. Este enviará diferentes mensajes de eco a los routers del equipo origen y destino durante un espacio de tiempo determinado  y nos muestra los resultados generados por cada enrutador. Al final, aparece un mensaje de esta clase:</p>
+<img src="../Comunicación de redes/img/26.png" alt="">
+<h2>Netsh</h2>
+<p>Si buscamos profundizar en el mundo de la gestión y configuración de redes en Windows, es probable que nos topemos con el comando netsh (Network Shell). Este nos permite una interfaz entre el administrador y el sistema operativo, que nos deja administrar y configurar las redes locales y remotas. Sus aplicaciones con variadas, como por ejemplo:</p>
+<ul>
+    <li>Gestión de firewall</li>
+    <li>Gestión de redes LAN y WLAN</li>
+    <li>Configuraciones IP</li>
+    <li>Configuración de servidores</li>
+</ul>
+<p>Esta nos ayuda a mantener nuestras infraestructuras a salvo de ataques externos. Para ello, tenemos opciones de diagnóstico de problemas que ocurren en la red y posibilidad de repararlos. Una de las ventajas que nos da este comando, es que resulta bastante rápido, cómodo y nos da la posibilidad de automatizarlo en muchas ocasiones. Todo esto se realiza mediante scripts, por lo cual podemos establecer configuraciones muy complejas con un simple clic.</p>
+<img src="../Comunicación de redes/img/27.png" alt="">
+<h2>Getmac</h2>
+<p>En unos segundos, podrás contar con las direcciones MAC de todas las interfaces de red asociadas a tu ordenador. Lo que significa que podrás saber tanto de las interfaces conectadas, como las desconectadas. Es bueno saber que todo dispositivo cuenta con una dirección MAC si es que cumple con sus estándares asociado. ¿A cuáles nos referimos? A cualquiera de los estándares IEEE 802: para conectarse por cable Ethernet, por Wi-Fi, Bluetooth y más. Además, también cuenta con diferentes funciones para determinar diferentes parámetros al ejecutar el comando.
+Como puede ser /fo, que especifica el formato en el que se nos mostrará la consulta. O /nh, que elimina el encabezado de las columnas en el resultado.</p>
+<img src="../Comunicación de redes/img/28.png" alt="">
+<h2>Chkdsk</h2>
+<p>El comando chkdsk, que significa Check Disk, es una herramienta muy importante en el entorno de Windows para verificar y corregir errores en el sistema de archivos. Al ejecutar chkdsk, el sistema escanea la unidad especificada en busca de problemas, incluyendo sectores defectuosos, enlaces cruzados, y otros errores potenciales.
+    La sintaxis básica del comando es chkdsk [unidad]:, donde «[unidad]» representa la letra de la unidad que deseas verificar y corregir. Por ejemplo, chkdsk C: analizará la unidad C: en busca de errores. Si se encuentran problemas durante el escaneo, chkdsk intentará corregirlos automáticamente, mejorando así la integridad del sistema de archivos.
+    Además, chkdsk también puede ejecutarse con diversas opciones, como /f para corregir automáticamente los errores encontrados, /r para localizar sectores defectuosos y recuperar información legible, y /x para desmontar la unidad antes de ejecutar la verificación. Estas opciones ofrecen un control adicional sobre la ejecución del comando y permiten abordar problemas específicos del sistema de archivos de manera más precisa.</p>
+<h2>Systeminfo </h2>
+<p>El comando systeminfo proporciona una visión integral de la configuración del sistema en una equipo de Windows. Al ejecutar systeminfo en la línea de comandos, se despliega una gran cantidad de información detallada, incluyendo la versión del sistema operativo, la fecha de instalación, el fabricante del sistema, la cantidad de memoria instalada, la configuración de red y mucho más.
+    Este comando es necesario y muy utilizado para obtener en detalle, una visión completa de la configuración de hardware y software del equipo. Proporciona detalles sobre actualizaciones de software, información del sistema BIOS, configuración de red, y detalles específicos sobre la memoria y procesadores instalados.
+    Además, la salida de systeminfo puede ser redirigida a un archivo para un análisis posterior o utilizado para diagnosticar problemas del sistema. La información detallada que ofrece es útil para los encargados del soporte técnico y administradores de sistemas al realizar un análisis exhaustivo de la configuración del sistema.</p>
+    <img src="../Comunicación de redes/img/29.png" alt="">
+
+<ul>
+    <li>¿Para qué sirve los grupos de trabajo en una red Windows?</li>
+    <li>¿Qué es y que utilidades tiene un grupo de trabajo en una red Windows? </li>
+</ul>
+<p>Los grupos de trabajo son una de las posibles formas de organizar los equipos dentro de una red local. Otras formas de organizar los equipos que pertenecen a una red local son mediante un dominio o mediante un grupo de hogar.
+    La totalidad de equipos pertenecientes a un mismo grupo de trabajo podrán verse y comunicarse entre ellos. Este hecho proporcionará las siguientes ventajas:</p>
+    <p>1.	Los equipos pertenecientes a un mismo grupo podrán compartir archivos y directorios entre ellos de forma extremadamente sencilla.
+    2.	Los equipos pertenecientes a un mismo grupo podrán compartir recursos como por ejemplo impresoras, etc.
+    </p>
+<p>En ningún momento los grupos de trabajo sirven para centralizar o gestionar permisos de equipos. La administración de usuarios y privilegios se hará de forma individual en cada uno de los equipos que forman parte del grupo de trabajo. Cada uno de los equipos pertenecientes a un grupo de trabajo tienen una relación de igual a igual entre ellos y se administran de forma local.
+    Los grupos de trabajo son útiles para ser usados en redes locales pequeñas. Por lo tanto, los grupos de trabajo son una buena solución para usarlos en nuestro hogar. En ambientes corporativos es más recomendable usar dominios.</p>
+<h2>PROPIEDADES DE LOS GRUPOS DE TRABAJO</h2>
+<p>Las características básicas de los equipos que forman parte de grupos de trabajo son las siguientes:</p>
+<ul>
+    <ol>La relación entre todos los equipos de un grupo de trabajo es de igual a igual. Por lo tanto, ningún ordenador perteneciente al grupo tiene control sobre el otro.</ol>
+    <ol>El número de equipos que forma un grupo de trabajo acostumbra a ser bajo. Si disponemos de un grupo de trabajo con más de 20 equipos deberíamos plantearnos migrar a un dominio.</ol>
+    <ol>Para que los usuarios de un grupo de trabajo puedan verse entre ellos deben encontrarse en la misma red local.</ol>
+    <ol>Cada equipo perteneciente al grupo de trabajo debe disponer de su cuenta de usuario local. Por lo tanto, para iniciar la sesión en un equipo perteneciente a un grupo de trabajo debemos disponer de una cuenta de usuario en este equipo.</ol>
+    <ol>Todos los usuarios de una red local pueden pertenecer a un grupo de trabajo sin necesidad de pedir permiso ni introducir ninguna contraseña. Por lo tanto, cuando compartimos una carpeta hay que configurar de forma adecuada los permisos y los usuarios que tendrán acceso a nuestra carpeta compartida.</ol>
+</ul>
+<h2>o	COMPROBAR SI NUESTRO EQUIPO FORMA PARTE DE UN GRUPO DE TRABAJO</h2>
+<p>Queramos o no queramos, todos los equipos con Microsoft Windows forman parte de un dominio o de un grupo de trabajo. Para conocer nuestro grupo de trabajo, o dominio, tenemos que acceder a nuestro panel de control. Para ello seguimos los siguientes pasos:</p>
+<ul>
+    <lo>Presionamos la combinación de teclas Ctrl+R.</lo>
+    <lo>Cuando aparezca la ventana de ejecutar escribimos la palabra control y presionamos Enter.</lo>
+</ul>
+<img src="../Comunicación de redes/img/30.png" alt="">
+<p>Una vez dentro del panel de control, en la opción Ver Por seleccionamos la opción Categoría. Seguidamente clicamos encima de la opción Sistema y Seguridad.</p>
+<img src="../Comunicación de redes/img/31.png" alt="">
+<p>A continuación, dentro de Sistema y seguridad clicamos encima del icono Sistema.</p>
+<img src="../Comunicación de redes/img/32.png" alt="">
+<p>Dentro de Sistema, tal y como se puede ver en la captura de pantalla, verán que mi grupo de trabajo es WORKGROUP.</p>
+<img src="../Comunicación de redes/img/33.png" alt="">
+<p>Nota: En el caso que perteneciera a un dominio, dentro del recuadro de color rojo figuraria la palabra dominio seguido del nombre del dominio al que pertenecemos.</p>
+
+<p><a href="Com red.html">Volver</a></p>
+
+
+
+
+</body>
+</html>

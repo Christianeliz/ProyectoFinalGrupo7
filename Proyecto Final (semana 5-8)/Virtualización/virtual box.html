@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../stilo2.css">
+    <title>PROYECTO  FINAL</title>
+</head>
+<body>
+
+    <h1>Virtual Box</h1>
+    <p>Fue inicialmente creado por la empresa Innotek bajo licencia propietaria. También hicieron una versión gratuita para uso personal o de evaluación con menos funcionalidades, la cual se encontraba regida por la licencia PUEL. En enero de 2007, la versión gratuita fue promocionada a libre, se la denominó VirtualBox OSE asignándosele la licencia libre GPLv2 y la versión completa de VirtualBox se ofreció gratuitamente bajo licencia PUEL. En febrero de 2008 la empresa Innotek fue comprada por Sun Microsystems y esta, a su vez, en enero de 2010 fue adquirida por Oracle, que cambió el nombre de VirtualBox a Oracle VM VirtualBox y también modificó la forma de distribuirlo, pues crearon una versión de VirtualBox bajo licencia libre GPLv2 a la que le faltaban algunos componentes propietarios (USB 2.0, VRDP, PXE y PCI passthrough) que se podían añadir mediante la instalación del paquete denominado Oracle VM VirtualBox Extension Pack bajo licencia PUEL. Este formato es el actual hoy en día, por lo que si queremos instalar un VirtualBox completo hay que instalar el paquete principal y a continuación el Extension Pack.
+    VirtualBox (VB) es un software de virtualización de tipo 2 donde los usuarios pueden cargar múltiples SSOO invitados en un solo SO anfitrión. Cada invitado se puede configurar, iniciar, pausar o parar de forma independiente. El SO anfitrión y los SSOO invitados pueden comunicarse entre sí a través de una serie de mecanismos, entre ellos un portapapeles común, carpetas compartidas, arrastrando y soltando ficheros, etc.</p>
+    <p>Algunas características importantes de VB son las siguientes:</p>
+    <p>- Multiplataforma: Puede ser instalado en diversos SSOO de 32 y 64 bits, como Windows, GNU/Linux, Mac OS X y Solaris.</p>
+    <p>- Puede virtualizar múltiples SSOO de 32 y 64 bits, como Windows 8, Windows 7, Windows XP, ..., Debian, Ubuntu, OpenSuSe, ..., OS/2, Mac OS X, DOS, Solaris, etc.</p>
+    <p>- Es software libre, usa la licencia GPLv2, aunque algunos componentes son gratuitos con licencia PUEL.</p>
+    <p>- Portabilidad: VB funcionalmente es muy parecido en todas las plataformas donde se puede ejecutar, por este motivo se pueden portar MMVV entre ellas, es decir, se puede crear una MV en Windows y luego ejecutarla en GNU/Linux. Además, las MMVV pueden ser fácilmente importadas y exportadas utilizando el Open Virtualization Format (OVF), un estándar creado para este fin. Se puede incluso importar en este formato MMVV que fueron creadas con un software de virtualización diferente.</p>
+    <p>- No siempre es necesaria la virtualización asistida por hardware: En muchos escenarios, VB no precisa de la virtualización asistida por hardware, que requiere de las funciones añadidas al hardware moderno, denomidas Intel VT-x para los microprocesadores de Intel y AMD-V para los micros de AMD. Este hecho, permite que VB pueda utilizarse incluso en hardware antiguo, donde estas características no están presentes. A veces, las MMVV intentan hacer operaciones que pueden interferir en el buen funcionamiento de la máquina anfitriona, y evitar esto es una de las funciones principales de los hipervisores. VB como tal, en la mayoría de los casos solo precisa de virtualización basada en software, pero en ocasiones, como por ejemplo en la virtualización de SSOO de 64 bits sobre plataformas hardware x86 (no fueron diseñadas pensando en la virtualización), para ejecutar las operaciones que pueden afectar al anfitrión, necesita la ayuda de Intel VT-x o AMD-V. No se debe olvidar que además de seleccionar estas características en la configuración de la MV, es probable que para que se puedan utilizar, también deban ser activadas en la BIOS de la máquina anfitriona. (Advertencia: Se permite instalar en la misma máquina anfitriona más de un software de virtualización, pero no es recomendable ejecutar más de uno a la vez, sobre todo cuando se utiliza virtualización asistida por hardware, ya que los hipervisores no pueden seguir lo que otros hipervisores están tratando de hacer sobre el anfitrión, consiguiéndose, muy posiblemente, el bloqueo del ordenador)</p>
+    <p>- Guest additions: son paquetes de software que se pueden instalar en el interior de los sistemas invitados compatibles para mejorar su rendimiento y proporcionar una mejor comunicación con el sistema anfitrión. Después de instalar las Guest Additions en una MV, esta mejorará en los siguientes aspectos:</p>
+    <ul>
+        <li>Integración del puntero del ratón, evitando que se tenga que hacer click sobre la ventana de la MV para que el ratón se le asigne a esta. Simplemente con poner el ratón sobre la ventana de la MV ya lo tendrá.</li>
+        <li>Carpetas compartidas entre el anfitrión y el invitado para intercambiar ficheros.</li>
+        <li>Mejora de las características gráficas de la MV, permitiendo el redimensionado automático de la interfaz gráfica del SO invitado cuando se modifica el tamaño de la ventana de la MV.</li>
+        <li>Modo fluido de las ventanas. Con este modo, las ventanas individuales abiertas sobre el escritorio del invitado se integran con las ventanas abiertas del anfitrión, dando la sensación de que las aplicaciones del invitado se están ejecutando en el anfitrión.</li>
+        <li>Sincronización de forma automática de la hora de la MV con el equipo anfitrión.</li>
+        <li>Compartir el portapapeles entre el anfitrión y el invitado.</li>
+    </ul>
+    <p>- Instantáneas (snapshots): Se pueden guardar instantáneas arbitrarias del estado actual de la MV, permitiendo volver atrás en el tiempo, restaurando la MV al estado congelado por la instantánea y comenzando así una configuración alternativa de la MV a partir de ahí.</p>
+    <p>- Grupos de MMVV: VB permite al usuario organizar las MMVV colectivamente, así como individualmente. En general, las operaciones que se pueden realizar con los grupos son las mismas que con las MMVV independientemente, es decir: iniciar, pausar, reiniciar, parar, etc. También es posible crear dentro de un grupo otros grupos.</p>
+    <p>- Permite montar imágenes ISO sobre las unidades de CD o DVD evitando el uso de los CDs y DVDs físicos.</p>
+    <br>
+
+    <h1>Permisos de usuario</h1>
+    <p>Cuando tenemos un servidor NAS basado en Linux, o directamente un sistema operativo como Debian o Ubuntu donde tenemos instalados diferentes servicios para acceder a los archivos y carpetas en red local por parte de otros usuarios, controlar el acceso de lectura, escritura y ejecución a los archivos y carpetas que compartimos es algo fundamental. Debemos tener en cuenta que, cuando compartir vía Samba o FTP nuestras carpetas y archivos, es posible que la autenticación de los clientes sea con un usuario sin privilegios, por tanto, deberemos organizar correctamente los usuarios y grupos para proporcionar los permisos necesarios y no más.</p>
+    <p>Los permisos en Linux son un conjunto de reglas y configuraciones que determinan qué acciones pueden realizar los usuarios y grupos sobre los archivos y directorios del sistema. Estos se dividen en diferentes formatos, los cuales hacen que la seguridad de los sistemas aumente y el control sea mayor. Y aunque en un principio este sistema de permisos pueda parecer complicado, podrás ir conociendo diferentes ejemplos para que puedas ponerlo en práctica por tu cuenta en Linux..</p>
+    <h2>¿Qué son los permisos de archivos?</h2>
+    <p>En Linux, los permisos de archivos y carpetas son un componente importante para gestionar la seguridad y el acceso a la información almacenada en el sistema de archivos de tu equipo. Estos permisos definen quién puede leer, escribir o ejecutar un archivo o directorio y desempeñan un papel fundamental en la protección de la integridad del sistema y la privacidad de los datos.
+    Debes saber que los permisos se dividen en tres categorías principales y que cada categoría tiene tres tipos de permisos: lectura, escritura y ejecución. Según la categoría, pueden ser:</p>
+    <ul>
+        <li>Propietario: El propietario es el usuario que creó el archivo o directorio. Este tiene el control total sobre los permisos y puede modificarlos según sus necesidades. Los permisos del propietario afectan directamente al usuario que creó el archivo.</li>
+        <li>Grupo: En Linux, los usuarios se organizan en grupos y un archivo o directorio puede pertenecer a uno de estos grupos. Los permisos asignados al grupo afectan a todos los usuarios que forman parte de ese grupo, permitiéndoles acceder y modificar archivos en conjunto.</li>
+        <li>Otros: Este conjunto de permisos se aplica a cualquier usuario que no sea el propietario ni esté en el grupo especificado. Los permisos otorgados o denegados a otros usuarios aseguran que el sistema permanezca protegido contra accesos no autorizados.</li>
+    </ul>
+    <p>La combinación de estas tres categorías y sus respectivos permisos crea un sistema que permite el control sobre quién puede hacer qué con un archivo o directorio. El uso principal de los permisos en Linux es garantizar la seguridad y la privacidad de los datos, al tiempo que permite la colaboración y el acceso necesario para los usuarios autorizados.</p>
+    <br>
+
+    <h2>¿Para qué cambiar los permisos?</h2>
+    <p>Los sistemas operativos son multiusuario, podemos acceder de forma simultánea con varios usuarios registrados localmente en nuestro sistema operativo, por tanto, es muy importante realizar una revisión periódica de los permisos existentes. Muchas veces queremos evitar que otros usuarios del equipo modifiquen los archivos, pero no sabemos cómo conseguirlo. En esta ocasión, os vamos a enseñar o cómo asignar permisos a carpetas y archivos en Linux.
+    Y es que el hecho de controlar el acceso a los datos es uno de los puntos más importantes. De ahí que sea vital establecer diferentes permisos y la propiedad de los archivos o directorios. Siempre con el objetivo de conocer quiénes tienen la opción de acceder a dicha información y así poder proteger los posibles datos sensibles que se tengan.</p>
+    <p>Imagina que tienes un servidor Samba o FTP y diferentes grupos de usuarios y también usuarios, si todos los usuarios tuvieran permisos de administrador, podrían leer, escribir y ejecutar cualquier archivo que tengamos en estas carpetas compartidas. Por este motivo es tan importante gestionar adecuadamente los permisos de los usuarios, grupos y otros para los archivos y las carpetas, para que solamente accedan a determinados archivos los usuarios o grupos de usuarios que nosotros queramos, y nadie más, aunque puedan autenticarse en el sistema a través del servicio Samba o FTP.</p>
+    <p>Para que todo sea mucho más claro, vamos a dividir este artículo en varios apartados que permitirán entender mejor en todo momento de qué se está hablando. Hay que aclarar que todo lo que explicaremos será a través de la línea de comandos, es decir, tendremos que sacar una consola o bien conectarnos vía SSH a nuestro servidor Linux. Si no estás familiarizado con este componente de Linux tal vez este sea el mejor momento, ya que el nivel de dificultad de lo que vamos a hablar es bajo.</p>
+    <br>
+
+    <h2>Tipos de cuenta</h2>
+    <p>Durante el post, vamos a tratar diferentes términos sobre las cuentas de usuario en Linux. Por lo cual cabe indicar los tipos que podemos encontrar dentro de este sistema operativo.</p>
+    <ul>
+        <li>Root: Se trata de la cuenta con los privilegios más altos en el sistema operativo. Puede llevar a cabo cualquier función de administración.</li>
+        <li>Usuarios normales: Estos tienen pocos permisos, y son sobre los que se aplican todos los que podemos crear para gestionar los accesos.</li>
+        <li>Usuarios de ejecución: Son usuarios que no pueden realizar un login, simplemente se dedican a lanzar procesos, entre otros.</li>
+    </ul>
+    <br>
+
+    <h2>Tipos de permisos</h2>
+    <p>Puede parecer simple, pero todo puede llegar a tener cierta complejidad a la hora de asignar los permisos en Linux. Todos ellos se pueden aplicar de diferentes formas. Tanto en red, con diferentes usuarios en un servidor, como en loca. Donde varios usuarios pueden manejar un mismo PC, con algunos recursos compartidos entre sí.</p>
+    <ul>
+        <li>Lectura (r): Es el primer permiso que podemos encontrarnos. Este nos da la opción de que un usuario pueda ver el contenido al que quiere acceder.</li>
+        <li>Escritura (w): Nos da la posibilidad de otorgar poder sobre sobre un archivo. De esta forma podrá ser modificado, al igual que un directorio.</li>
+        <li>Ejecución (x): Permite a los usuarios ejecutar diferentes parámetros dentro del equipo.</li>
+        <li>Sin permisos (-): Nos indica que el usuario no tiene ningún tipo de permiso sobre el recurso de red o contenido compartido.</li>
+    </ul>
+    <br>
+
+    <h2>Niveles de permisos</h2>
+    <p>Los diferentes niveles de permisos en Linux, se encargan de definir algunos parámetros en cuanto a las posibilidades de uno o más usuarios sobre un determinado archivo. En este caso, hay uno que es para el propietario, mientras que el otro se usa para los usuarios del mismo grupo que el propietario. Por otro lado, hay un tercer permiso que se usa para los demás usuarios.</p>
+    <p>Para que te hagas una idea más clara de cuáles son los niveles de permisos que hay, estos se dividen en tres secciones.</p>
+    <ul>
+        <li>Permisos de propietario: Se trata del usuario que crea el archivo desde su equipo. Linux asigna a este usuario el acceso a la información creada, y la posibilidad de realizar cambios sobre el mismo. Este se identifica con el parámetro «u».</li>
+        <li>Permisos de grupo: Cuando un usuario pertenece a un grupo dentro del directorio de Linux, quiere decir que se le otorgan los mismos permisos que tienen los demás usuarios que pertenecen a ese mismo grupo. El sistema identifica esto con el parámetro «g».</li>
+        <li>Permisos del resto de usuarios: En este caso nos referimos a los usuarios que no son los creadores del archivo, ni pertenecen al grupo que hemos indicado anteriormente. Los permisos y accesos de estos usuarios los puede establecer el propietario. El sistema los establece con el parámetro</li>
+    </ul>
+    <br>
+
+    <h2>Formarse en Linux</h2>
+    <p>Linux es uno de los sistemas más utilizados actualmente en el mundo. Y conocer sobre la administración de este sistema, no solo en permisos, puede abrir muchas puertas. Y lo primero que vamos a conseguir, es ser más polivalentes a nivel profesional. Esto es muy importante en el sector tecnológico, y así poder ofrecer mejores soluciones a todos los usuarios. Así como estar formándose en un sistema operativo muy seguro, donde podemos trabajar con una buena arquitectura. Y siendo una opción que utilizan gran cantidad de empresas, es una muy buena oportunidad en el mundo laboral para casi cualquier usuario que decida emprender en este mundo.
+     Por otro lado, al ser un sistema gratuito, hace que sea muy accesible. Lo cual facilita mucho la formación. En internet nos podemos encontrar gran cantidad de cursos, incluido con posibilidad de obtener un certificado. Y con los cuales nos podemos llegar a especializar en muchos ámbitos diferentes, tanto con permisos sobre los usuarios como estamos viendo en este post, como con otras actividades relacionadas.</p>
+    <br>
+     
+    <h2>Impacto en el rendimiento</h2>
+    <p>En los sistemas operativos basados en Linux, es muy importante establecer los permisos en archivos y directorios para mantener la seguridad y prevenir accesos no autorizados. En cambio, es muy importante entender que generar todos estos permisos puede llegar a afectar al rendimiento del sistema. Ya que, al fin y al cabo, se trata de más operaciones que el equipo debe hacer. Cuando un usuario trata de acceder a alguno de estos contenidos, el sistema debe realizar una verificación sobre el usuario para ver si tiene los permisos adecuados para acceder a ese recurso. Si estos no están correctamente configurados, el sistema tendrá que realizar más verificaciones. Afectando al rendimiento del sistema. Si bien esto es algo que afecta en menor medida, puede no ser así cuando hay miles de usuarios.
+    Por lo cual, establecer los permisos adecuados afecta al rendimiento del sistema. Cuando cambiamos permisos en archivos o directorios, el sistema debe realizar una actualización de la información en sus bases de datos de permisos. Siendo esto algo que puede tardar un poco, dependiendo la cantidad de permisos que establezcamos. Pero esto es algo que puede incluso afectar a la productividad del sistema. Si los permisos establecidos son demasiado restrictivos, pueden generar dificultades a los usuarios. En estos casos, es necesario realizar un ajuste de los mismos, y proporcionar unos accesos más claros y menos restrictivos.
+    Lo más importante siempre será mantener la seguridad en el sistema. Si los permisos son inadecuados, los usuarios podrán acceder a contenido que igual no deberían poder. Y esto, es algo que pone en riesgo la seguridad del todo el sistema, y donde se pueden producir problemas muy variados. Por lo cual, a pesar de que establecer permisos es algo que afecta al rendimiento, se trata de una medida muy necesaria para garantizar la seguridad en el mismo.</p>
+    <br>
+
+    <h2>Permisos más complejos</h2>
+    <p>Los permisos en Linux pueden alcanzar cotas de complejidad muy altas. Esto es algo que se consigue implementando diferentes estrategias y técnicas, que sirven para que la seguridad sea un factor mucho más importante y distintivo dentro del sistema. Esto se puede hacer de diferentes formas.</p>
+    <ul>
+        <li>Implementar el principio de privilegio mínimo: Este principio se basa en otorgar sólo los permisos necesarios para que los usuarios o grupos realicen sus tareas específicas. Evitar dar permisos innecesarios ayuda a reducir el riesgo de acceso no autorizado o cambios no deseados en los recursos.</li>
+        <li>Utilizar ACL (Listas de Control de Acceso): Las ACL permiten un mayor nivel de control sobre los permisos en Linux, ya que permiten definir permisos más detallados para usuarios y grupos específicos. Con las ACL, es posible otorgar o denegar permisos de acceso individualmente para diferentes usuarios y grupos, aumentando así la complejidad de los permisos.</li>
+        <li>Utilizar grupos de usuarios: Crear grupos de usuarios y asignar permisos a esos grupos puede facilitar la administración de permisos y aumentar la complejidad. Los usuarios pueden ser miembros de diferentes grupos y, dependiendo de los permisos asignados a cada grupo, tendrán diferentes niveles de acceso a los recursos.</li>
+        <li>Limitar el acceso a recursos sensibles: Es recomendable restringir el acceso a recursos sensibles, como archivos de configuración o directorios críticos del sistema, solo a usuarios o grupos autorizados. Esto se puede lograr mediante la asignación adecuada de permisos y el uso de herramientas como SELinux (Security-Enhanced Linux) para aplicar políticas de seguridad adicionales.</li>
+        <li>Monitorizar y auditar los cambios: Es importante establecer mecanismos de monitorización y auditoría para realizar un seguimiento de los cambios en los permisos de los recursos. Esto ayuda a identificar posibles infracciones de seguridad o cambios no autorizados, permitiendo tomar acciones correctivas de manera oportuna.</li>
+    </ul>
+    <br>
+
+    <h1>El comando chmod</h1>
+    <p>Para que se puedan cambiar los permisos en Linux hay que recurrir al comando chmod. Y para esto, también hay que tener en cuenta que el comando debe estar acompañado del nuevo nivel de privilegios que se quiera dar al nuevo directorio o archivo en cuestión. Además de un ‘+’ o ‘-‘, en función de si se quiere quitar o dar nuevos permisos. Pero, antes de esto, hay que conocer más a fondo en qué consiste este comando y su finalidad.</p>
+    <br>
+
+    <h2>Para qué sirve</h2>
+    <p>El comando chmod (change mode) tiene como finalidad cambiar los permisos de usuario, grupo y otros a los archivos y carpetas, podremos cambiar los permisos de lectura, escritura y ejecución de todos los archivos y carpetas que nosotros deseemos, además, podremos hacer una modificación recursiva de una determinada carpeta, de esta forma, todos los archivos y carpetas de su interior también se verán afectados por este cambio. La modificación recursiva es de mucha ayuda cuando tenemos que modificar los cientos o miles de archivos que tengamos dentro de una carpeta, y también todo lo que hay por debajo en el árbol de directorios.
+        El comando chmod está disponible tanto en sistemas operativos Linux como también Unix, por tanto, si nuestro servidor está basado en Unix como un FreeBSD, podremos cambiar los permisos de archivos y carpetas de la misma forma que lo hacemos en un Debian o Ubuntu. Este comando es ampliamente utilizado por cualquier administrador de sistemas para configurar adecuadamente los accesos a sus servidores.
+        Hoy en día la mayoría de los servidores NAS como QNAP, ASUSTOR o Synology, hacen uso de un sistema operativo propio pero que está basado en Linux, por lo que en estos sistemas también se encuentra el comando chmod para cambiar los permisos de los archivos y carpetas del servidor.
+        Aunque estos fabricantes disponen de interfaces gráficas de usuario para poner o quitar los diferentes permisos, es muy importante conocer el comportamiento interno del propio comando para entender bien qué significa lo que estamos viendo. Además, en estos sistemas operativos también tenemos la posibilidad de entrar vía SSH para ejecutar nosotros mismos los comandos que queramos.</p>
+    <p>La sintaxis de utilización de chmod es la siguiente:</p>
+    <p><b>chmod [modificadores] permisos fichero/directorio</b></p>
+    <img src="./img/chmod .png" alt="">
+    <p>Primero ejecutaremos la orden chmod, a continuación, podremos incorporar diferentes modificadores, por ejemplo, el «-R» para hacerlo recursivo a todas las carpetas y archivos dentro de una misma carpeta, a continuación, debemos poner los permisos nuevos que queremos aplicar, y finalmente, pondremos la ruta absoluta o relativa del archivo o carpeta que queremos modificar los permisos. Si vamos a ejecutar la orden recursiva, debemos tener en cuenta que todos los permisos de archivos y carpetas que estén contenidos en el directorio actual que indiquemos y todos los que haya por debajo, se modificarán al ejecutarlo.
+    Un detalle muy importante, es que en algunos casos es totalmente necesario ejecutar chmod con permisos de superusuario, ya que solamente el usuario administrador del sistema operativo podrá cambiar los permisos. Esto se puede conseguir iniciando sesión como root, o directamente utilizando el popular comando «sudo» para ascender a superusuario temporalmente con el comando a ejecutar. Este comportamiento es lógico porque estamos cambiando una configuración del sistema operativo muy crítica como son los permisos de usuarios de archivos y directorios.</p>
+    <br>
+
+    <h2>Ejemplos de uso de chmod para cambiar los permisos</h2>
+    <p>Lo primero que vamos a hacer es crear una carpeta nueva y archivos en su interior, con el objetivo de que practiquéis con estas carpetas y archivos, y no modifiquéis los permisos predeterminados de las carpetas ya existentes en vuestro sistema operativo. Por este motivo, vamos a realizar los preparativos para que las pruebas sean un éxito. Antes de empezar, todos los comandos que vais a ejecutar se harán con diferentes usuarios, con el objetivo de comprobar correctamente los permisos que vayamos a aplicar. Para pasar de un usuario a otro en sistemas Linux, basta con abrir la consola y ejecutar «su nombre_usuario«, introducimos la contraseña y automáticamente accederemos al terminal como si fuéramos el otro usuario. Es muy importante fijarnos bien con qué usuario estamos logueados, para saber con qué usuario estamos simplemente debemos ejecutar la orden «whoami» y automáticamente nos aparecerá el nombre de usuario que estamos probando. Es muy importante que cuando realicemos cambios importantes de permisos, comprobemos que los usuarios acceden a lo que deberían acceder y también no puedan acceder a lo que realmente no deberían acceder.</p>
+    <br>
+
+    <h2>Preparando un sistema para las pruebas</h2>
+    <p><a href="./pruebas.html">Ver</a></p>
+    <br>
+
+    <h2>Linux vs Windows</h2>
+    <p>Uno de los eternos debates acerca de los sistemas operativos, tiene que ver con cual es mejor entre Linux y Windows. Son muy diferentes, y esto es algo que llega incluso a simples permisos sobre carpetas o archivos. En este caso nos podemos encontrar algunas diferencias bastante significativas.</p>
+    <p>Ten en cuenta que en Linux cada uno de los archivos y carpetas cuentan con un propietario y un grupo, sobre los cuales se permite establecer los permisos específicos para cada uno de ellos. En cambio, en Windows para los permisos de archivos y carpetas se establecen a través del sistema de control de acceso de Windows. Los permisos se dividen en tres categorías que son los de usuario, los de grupo y los permisos especiales. Tanto los de grupo como de usuario, se pueden asignar para disponer de un control de acceso a archivos y carpetas. Mientras que los especiales son para controlar el acceso a recursos del sistema. Como registros de Windows o herramientas de administración.
+    Una de las diferencias clave, es que en Linux los permisos se establecen para cada uno de los archivos y carpetas de forma individual. Cosa que es diferente en Windows, donde se establecen para una carpeta, y estos se aplican a todos los archivos y subcarpetas que se encuentran dentro de la misma. Esto quiere decir, que en Windows resulta más sencillo poder aplicar permisos, pero justo esto hace que sea más complicado establecer permisos más personalizados para archivos y carpetas individuales.
+    Por otro lado, en Linux el usuario root tiene acceso a todos los archivos y carpetas del sistema. En cambio, en Windows el usuario administrador tiene la gran mayoría de los archivos y carpetas, pero no todos ellos. Esto quiere decir que, en Linux, cobra mucha importancia mantener la seguridad del usuario root. Para ello es recomendable utilizar contraseñas fuertes que no se utilicen para más cometidos. Mientras que, en el sistema operativo de Microsoft, debemos utilizar cuentas de usuarios normales para la gran mayoría de las tareas de administración. La cuenta de Administrador, quedaría solo para cuando sea totalmente necesaria.</p>
+    <br>
+
+    <h2>Implementación de Inteligencia Artificial</h2>
+    <p>Sea el sistema que sea, controlar los permisos es un apartado crítico dentro del organigrama de las empresas. Por eso se trata de algo que se debe no solo organizar correctamente, sino disponer de una buena optimización para que todo funcione de forma fluida. Es aquí donde entran las inteligencias artificiales. Estas se están implementando y probando en un sin fin de sistemas y tareas, y la asignación de permisos no es diferente. Con estas herramientas, se pueden aprovechar los algoritmos de aprendizaje para analizar diferentes apartados. Todo con la finalidad de optimizar y mejorar el control de los permisos en las carpetas del sistema.</p>
+    <ul>
+        <li>Análisis de patrones: Con una IA es posible realizar análisis de patrones, incluso en los históricos de acceso. Esto permite identificar comportamientos de usuarios, y así poder establecer patrones de acceso a las carpetas. Por otro lado, nos ayuda a encontrar posibles intentos de acceso no autorizado a los contenidos.</li>
+        <li>Recomendaciones: En muchas ocasiones el conocer cómo aplicar los permisos es complicado. Por lo cual podemos aprovechar el análisis de patrones previo, para que la IA nos recomiende los permisos que se deben aplicar. De este modo, se podrán establecer rápidamente las políticas de permisos más coherentes y necesarias.</li>
+        <li>Administración centralizada: Con el uso de inteligencias artificiales, podemos disponer de un sistema mucho más centralizado para la administración de los permisos. Por lo cual todo el sistema se va a beneficiar, al igual que los usuarios. Ya que todo el proceso de asignación será mucho más rápido.</li>
+        <li>Automatización: Automatizar procesos siempre es algo que se estudia con detenimiento en todas las organizaciones. Con una IA puede ser posible reducir el trabajo manual, minimizando así los más que posibles errores humanos que se pueden cometer. Permitiendo así, una administración más eficiente de todos los permisos.</li>
+    </ul>
+    <br>
+
+    <h2>SUID, SGID y persistencia</h2>
+    <p>Aparte de todos los permisos que hemos visto, existen otras tres opciones a considerar. Son SUID y SGID, los cuales están relacionados con los usuarios en el caso de SUID, con los grupos con SGID y los bits de permisos con persistencia. Para entender esto, debemos conocer el uso de passwd, el cual se utiliza para cambios de contraseña.</p>
+    <ul>
+        <li>SUID: En este caso en lugar de las «x» correspondientes nos encontramos con la «s» (suid). Esto se utiliza para poder utilizar el comando passwd por otros usuarios, y no solo por el usuario root. En este caso, el bit SUID obliga al archivo en cuestión a ejecutarse como si fuera el usuario propietario del mismo, y no como si se tratara del usuario propietario en cuestión. Por lo cual, da la posibilidad de ejecutar un comando sobre archivos en propiedad de otros usuarios.</li>
+        <li>SGID: Su funcionamiento es igual al anterior, solo que en este caso el involucrado es el grupo al que corresponde el archivo. Si un usuario pertenece a un grupo, a la vez que existe un binario en otro grupo y este tiene el bit SGID activado, el usuario que se encuentra en el otro grupo puede ejecutar el comando. De igual forma, se muestra con una «s» en lugar de «x».</li>
+        <li>Bit de persistencia: Se aplica a los directorios como pueden ser /tmp, y se establecen con una «t». Está orientado a directorios compartidos entre varios usuarios, donde solo el propietario puede eliminarlo. Por lo cual los demás usuarios sí van a poder ver el contenido y ejecutarlo, pero no podrán eliminarlo o realizar modificaciones. En el caso de no tener el bit de persistencia activado, podrían eliminarlo o modificarlo todos los usuarios.</li>
+    </ul>
+    <p>Todo esto nos ayuda a generar permisos especiales, no limitados a los más comunes de lectura, escritura y ejecución. Estos son más precisos, y están muy enfocados a la seguridad de que estos no se pierdan o se modifiquen por error, lo cual puede suponer pérdida de información. En todo caso, lo más recomendable es establecer copias de seguridad.</p>
+    <p>También os recomendamos investigar sobre los comandos getfacl y setfacl para configurar listas de control de acceso más avanzadas en Linux, y no utilizar solamente los usuarios, grupos y otros, esto nos permitirá una mayor granularidad, aunque es claramente mucho más avanzado que el popular chmod. En general, si realizas una buena organización de usuarios y grupos, no deberías necesitar el uso de estas listas de control de acceso.</p>
+    <br>
+
+    <h2>Laboratorio Clase 6 - Terminal de Linux</h2>
+    <p><a href="./lab6.html">Ver</a></p>
+    <br>
+    <h2>Laboratorio 7 - Linux y Windows</h2>
+    <p><a href="./lab7.html">Ver</a></p>
+    <p><a href="../../Pagina Principal.html">Volver</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

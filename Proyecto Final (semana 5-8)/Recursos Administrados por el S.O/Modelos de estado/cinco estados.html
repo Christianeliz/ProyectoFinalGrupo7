@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilo3.css">
+    <title>PROYECTO FINAL</title>
+</head>
+<body>
+    <h1>Modelo de cinco estados</h1>
+    <img src="../modelo cinco estados.png" alt="" height="350px">
+    <ul>
+        <li>El modelo anterior de dos estados funcionaría bien con una cola FIFO
+            y planificación por turno rotatorio para los procesos que no están en
+            ejecución, si los procesos estuvieran siempre listos para ejecutar.</li>
+        <li>En la realidad, los procesos utilizan datos para operar con ellos, y puede
+            suceder que no se encuentren listos, o que se deba esperar algún
+            suceso antes de continuar, como una operación de Entrada/Salida.</li>
+        <li>Es por esto que se necesita un estado donde los procesos permanezcan
+            bloqueados esperando hasta que puedan proseguir.</li>
+        <li>Se divide entonces alestados: Listo y Bloqueado. Se agregan además un estado Nuevo y
+            Terminado. estado Noejecución en dos otro terminado</li>
+        <li>Los nuevos estados Nuevo y Terminado son utiles para la gestion de
+            procesos. En este modelo los estados Bloqueado y Listo tienen
+            ambos una cola de espera.</li>
+        <li>Cuando un nuevo proceso es admitido por el sistema operativo, se
+            sitúa en la cola de listos. A falta de un esquema de prioridades ésta
+            puede ser una cola FIFO. Los procesos suspendidos son mantenidos
+            en una cola de bloqueados. Cuando se da un suceso se pasan a la
+            cola de listos los procesos que esperaban por ese suceso.</li>
+        <li>Si existe un esquema con diferentes niveles de prioridad de procesos
+            es conveniente mantener varias colas de procesos listos, una para
+            cada nivel de prioridad, lo que ayuda a determinar cuál es el proceso
+            que más conviene ejecutar a continuación.</li>
+    </ul>
+    <a href="../so.html">Volver</a>
+    <p>Te podría interesar:</p>
+    <ul>
+        <li><a href="../Modelos de estado/dos estados.html">Modelo de dos estados</a></li>
+        <li><a href="../Modelos de estado/estado proceso.html">Estado de un proceso</a></li>
+        <li><a href="../Modelos de estado/bloqueados.html">Bloqueados</a></li>
+        <li><a href="../Modelos de estado/bcp.html">El PCB O BCP (bloqueo control del  proceso)</a></li>
+    </ul>
+</body>
+</html>

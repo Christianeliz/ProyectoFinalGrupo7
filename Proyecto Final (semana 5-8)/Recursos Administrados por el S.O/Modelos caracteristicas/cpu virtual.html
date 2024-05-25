@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="...../diseño/Proyecto Final (semana 5-8)/Recursos Administración/stilo.css">
+    <title>PROYECTO FINAL</title>
+</head>
+<body>
+    <h1>CPU virtual</h1>
+    <p>Un procesador virtual es una representación de un núcleo de procesador físico al sistema operativo de una partición lógica que utiliza procesadores compartidos.
+
+        Cuando se instala y ejecuta un sistema operativo en un servidor que no está particionado, el sistema operativo calcula el número de operaciones que puede realizar simultáneamente contando el número de procesadores que hay en el servidor. Por ejemplo, si se instala un sistema operativo en un servidor que tiene ocho procesadores y cada procesador puede realizar dos operaciones a la vez, el sistema operativo puede realizar 16 operaciones simultáneamente. Del mismo modo, cuando se instala y ejecuta un sistema operativo en una partición lógica que utilice procesadores dedicados, el sistema operativo calcula el número de operaciones que puede realizar simultáneamente contando el número de procesadores dedicados que están asignados a la partición lógica. En ambos casos, el sistema operativo puede calcular fácilmente cuántas operaciones puede realizar simultáneamente contando el número entero de procesadores de que dispone.
+        
+        Sin embargo, cuando se instala y ejecuta un sistema operativo en una partición lógica que utiliza procesadores compartidos, el sistema operativo no puede calcular un número entero de operaciones a partir del número fraccionario de unidades de proceso que están asignadas a la partición lógica. Por tanto, el firmware de servidor debe representar la potencia de proceso disponible en el sistema operativo como un número entero de procesadores. De esta manera, el sistema operativo puede calcular el número de operaciones simultáneas que puede realizar. Un procesador virtual es una representación de un procesador físico al sistema operativo de una partición lógica que utiliza procesadores compartidos.
+        
+        El firmware de servidor distribuye las unidades de proceso de forma uniforme entre los procesadores virtuales asignados a una partición lógica. Por ejemplo, si una partición lógica tiene 1,80 unidades de proceso y dos procesadores virtuales, cada procesador virtual tiene 0,90 unidades de proceso que dan soporte a la carga de trabajo.
+        
+        Existen límites en el número de unidades de proceso que se pueden tener para cada procesador virtual. El número mínimo de unidades de proceso que se pueden tener para cada procesador virtual es de 0,10 (o diez procesadores virtuales por cada unidad de proceso). Cuando el firmware está en el nivel 7.6 o superior, el número mínimo de unidades de procesamiento se reduce un 0,05 más (o 20 procesadores virtuales para cada unidad de procesamiento). El número máximo de unidades de proceso que se pueden tener para cada procesador virtual es siempre 1,00. Esto significa que una partición lógica no puede utilizar más unidades de proceso que el número de procesadores virtuales que tiene asignados, aunque la partición lógica no esté acotada.
+        
+        En general, una partición lógica funciona mejor si el número de procesadores virtuales se acerca al número de unidades de proceso que están disponibles en la partición lógica. De esta forma, el sistema operativo puede gestionar de forma eficaz la carga de trabajo de la partición lógica. En determinadas situaciones, es posible aumentar ligeramente el rendimiento del sistema aumentando el número de procesadores virtuales. Si se aumenta el número de procesadores virtuales, aumenta el número de operaciones que pueden ejecutarse simultáneamente. Sin embargo, si aumenta el número de procesadores virtuales sin aumentar el número de unidades de proceso, disminuirá la velocidad de ejecución de cada operación. El sistema operativo tampoco puede mover la potencia de proceso entre procesos si la potencia de proceso se divide entre muchos procesadores virtuales.</p>
+    <a href="../so.html">Volver</a>
+    <p>Te podría interesar:</p>
+    <ul>
+        <li><a href="../Modelos caracteristicas/Psecuencial.html">Proceso Secuencial</a></li>
+        <li><a href="../Modelos caracteristicas/proceso.html">Proceso</a></li>
+        <li><a href="../Modelos caracteristicas/sistema operativo.html">Sistema Operativo</a></li>
+    </ul>
+</body>
+</html>

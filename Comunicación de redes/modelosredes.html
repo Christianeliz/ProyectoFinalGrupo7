@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../stilo.css">
+    <title>Modelos de Redes</title>
+</head>
+<body>
+    <h1>Modelos de Redes </h1>
+    <p>Existen muchas formas de describir y analizar las redes de comunicación de datos. Todas las redes
+         proporcionan las mismas funciones básicas para transferir un mensaje desde un emisor hasta un recetor.
+          Pero cada red puede emplear diferente hardware y software de redes para ofrecer estas funciones. Todos estos
+           productos de hardware y software tienen que trabajar en conjunto para transferir con éxito un mensaje. Para 
+           lograr una correcta comunicación existen los modelos de redes, hay muchos, pero los más usados son:</p>
+           <ul>
+            <li>El Modelo de Referencia de Interconexión de Sistemas Abiertos (OSI)</li>
+            <li>Modelo Internet</li>
+            <li>Modelo de Referencia de Interconexión de Sistemas abiertos </li>
+           </ul>
+           <div>
+            <h2>Modelo OSI</h2>
+        </div>
+        <div class="subtitulo">
+            <ul>
+                <li>
+                    Capa 1 Física: 
+                    <p>Es la conexión entre el emisor y el recetor. Su papel consiste en transmitir una serie de 
+                        señales eléctricas, de radio o de luz y a través del circuito. La capa física incluye los dispositivos de 
+                        hardware (computadoras, módems, concentradores) y los medios físicos (cables, satélites). La capa física especifica
+                         el tipo de conexión y las señales eléctricas, ondas de radio o pulsaciones de luz que pasan a través de ella.
+                    </p>
+                </li>
+                <li>
+                    Capa 2 De Enlaces de Datos: 
+                    <p>Es responsable de transferir un mensaje de una computadora a la computadora siguiente en la ruta de la red desde el 
+                        emisor hasta el receptor. Primeramente, controla la capa física decidiendo cuándo transmitir mensaje sobre los medios. En segundo
+                         lugar, formatea los mensajes indicando donde comienzan y donde determina. En tercer lugar, detecta y corrige los errores que hayan
+                          ocurrido durante la transmisión.
+                        </p>
+                </li>
+                <li>
+                    Capa 3 De Red:
+                    <p>
+                        Es responsable de mensajes de extremo a extremo desde el emisor hasta el destino final. En primer lugar, 
+                        realiza el enrutamiento y selecciona la siguiente computadora a la que se debe enviar el mensaje. En segundo lugar, 
+                        encuentra la dirección de dicha computadora si es que aún no la conoce.
+                    </p>
+                </li>
+                <li>
+                    Capa 4 De Transporte: 
+                    <p>
+                        Se ocupa de las cuestiones de extremo a extremo, como los procedimientos para entrar y salir de la red. Establece, mantiene y
+                         termina las conexiones lógicas para la transferencia de datos entre el emisor original y el destino final del mensaje. Es responsable
+                          de obtener la dirección del usuario final (si es necesario), descomponer una transmisión grande de datos de paquetes más pequeños (si es necesario), 
+                          asegurar que todos los paquetes hayan sido recibidos, eliminar paquetes duplicados y realizar un control de flujo para asegurar que ninguna computadora 
+                          se sobrecargue por el número de mensajes que recibe. Aunque la capa de enlace de datos efectúa el control de errores, la capa de transporte también puede 
+                          realizar verificación.
+                    </p>
+                </li>
+                <li>
+                    Capa 5 De Sesión: 
+                    <p>
+                        Es la responsable de iniciar, mantener y terminar cada sesión lógica entre los usuarios finales. Esta capa es la responsable de administrar y estructurar todas
+                         las sesiones. El arranque de una sesión debe hacer los arreglos para todos los servicios deseados y requeridos entre los participantes de la sesión, como hace
+                          la conexión con el equipo del circuito, transferir archivos, usar varios tipos de terminales y realizar verificación de seguridad. La capa de sesión también se
+                           encarga de la contabilidad de la sesión a fin de que el usuario correcto reciba la cuenta.
+                    </p>
+                </li>
+                <li>
+                    Capa 6 De Presentación: 
+                    <p>
+                        La capa de presentación formatea los datos para su presentación al usuario. Su tarea consiste en acomodar diferentes interfaces en diferentes terminales o computadoras 
+                        para que el programa de aplicación no tenga que preocuparse de ellas, Se encarga de exhibir, formatear y editar las entradas y salidas de los usuarios.
+                    </p>
+                </li>
+                <li>
+                    Capa 7 De Aplicación:
+                    <p>
+                        La capa de aplicación es el acceso del usuario final a la red. El principal objetivo es suministrar un conjunto de servicios a los programas de aplicación.
+                         Cada programa de usuario determina el conjunto de mensajes y cualquier acción que podría tomar al recibir un mensaje. Otras aplicaciones específicas a la red en esta 
+                         capa incluyen el monitoreo de la red y la administración de la red.
+                    </p> 
+                    
+                </li>
+            </ul>
+            <div>
+                <img  src="img/osi1.png" alt="">
+
+            </div>
+
+        </div>
+
+<div class="subtitulo">
+    <h2> Comandos Básicos CMD para Redes</h2>
+    <ul>
+        <li>1. PING</li>
+        <p>
+            Si necesitas una herramienta de diagnóstico que permita hacer verificaciones de estado de un determinado host local o remoto, te presento uno de los comandos más utilizados, este es, ni más ni menos que ping.
+            Siempre que necesites hacer una verificación sobre un dispositivo interconectado en una infraestructura de red se encuentra levantado o no, la primera prueba básica debe ser lanzar una consulta al protocolo de red ICMP (Internet Control Message Protocol) en una red de tipo TCP/IP (Protocolo de Control de Transmisión / Protocolo de Internet).
+            Ping es un acrónimo de Packet Internet Groper que en español se traduce a un buscador de paquetes en redes.
+            Aunque la mayoría de los usuarios que aplican un uso básico de la consola, usan este comando para saber si existe conectividad a internet.
+            Se lanza una solicitud de conexión a la dirección 8.8.8.8, que representa el DNS de Google, a lo cual este siempre debería de responder, de lo que, si funciona, podemos deducir que se está llegando correctamente y que existe buena conectividad.
+            Además, se agrega un número de solicitudes, por lo que se abordarán 5.
+            Esta es la salida de la ejecución:
+
+        </p>
+        <img src="img/ping.png" alt="">
+        <li>2.IPCONFIG</li>
+    <p>
+        Obtener datos de la configuración de red TCP/IP nunca fue tan sencillo como utilizar el comando ipconfig, que precisamente obtener esta información y actualiza la configuración del protocolo de configuración dinámica de host (DHCP) y del sistema de nombres de dominio (DNS).
+        El modo de uso es tan sencillo como escribir: ipconfig.
+        Te muestro cómo filtra la información por el protocolo IPv4.
+    </p>
+    <img src="img/ipconfig.png" alt="">
+    <li>3.HOSTNAME</li>
+    <p>
+        Muestra el nombre del host actual. Este, probablemente es de los comandos de red más sencillos que existen
+    </p>
+    <img src="img/hostname.png" alt="">
+    <li>4.GETMAC</li>
+    <p>
+        Como lo dice su nombre, obtiene las direcciones MAC (Media Access Control) que tienen asociadas los adaptadores de red.
+    </p>
+    <img src="img/getmac.png" alt="">
+    <li>5.ARP</li>
+    <p>
+        Muestra y modifica las tablas de conversión de direcciones IP en direcciones físicas que utiliza el protocolo de resolución de direcciones ARP (Address Resolution Protocol).
+        La caché ARP contiene una o más tablas que se utilizan para almacenar direcciones IP y sus direcciones físicas Ethernet o Token Ring resueltas.
+        Para mostrar las tablas de caché arp para todas las interfaces, escriba:
+    </p>
+    <img src="img/Captura.PNG" alt="">
+    <li>6. NSLOOKUP</li>
+    <p>Este es de los comandos más útiles al momento de diagnosticar la infraestructura del sistema de nombres de dominio (DNS).
+        La herramienta de línea de comandos nslookup tiene dos modos: interactivo y no interactivo.
+        Si necesita buscar solo un dato, se recomienda que utilice el modo no interactivo. Para el primer parámetro, escriba el nombre o la dirección IP de la computadora que desea buscar. Para el segundo parámetro, escriba el nombre o la dirección IP de un servidor de nombres DNS.
+        </p>
+        <img src="img/Captura2.PNG" alt="">
+        <li>7.NBTSTAT</li>
+        <p>
+            Muestra las estadísticas del protocolo NetBIOS sobre TCP/IP (NetBT), las tablas de nombres NetBIOS para la computadora local, las computadoras remotas y la caché.
+            Este comando está disponible solo si el Protocolo de Internet (TCP/IP) está instalado como un componente en las propiedades de un adaptador de red en Conexiones de red.
+            Para mostrar la tabla de nombres NetBIOS de la computadora local:
+        </p>
+        <img src="img/Captura3.PNG" alt="">
+        <li>8.NETSTAT</li>
+        <p>Muestra las conexiones TCP activas, los puertos en los que la computadora está escuchando, las estadísticas de Ethernet, la tabla de enrutamiento de IP, las estadísticas de IPv4 (para los protocolos IP, ICMP, TCP y UDP) y las estadísticas de IPv6 (para IPv6, ICMPv6, TCP sobre IPv6 y UDP sobre protocolos IPv6).
+            Para mostrar tanto las estadísticas de Ethernet como las estadísticas de todos los protocolos:
+            </p>
+            <img src="img/Captura4.PNG" alt="">
+            <li>9.NET USE</li>
+            <p>
+                Este comando net use es una instrucción que se utiliza para conectarse, eliminar y configurar conexiones a recursos compartidos, como unidades asignadas e impresoras de red.
+                Es uno de los muchos como net send, net user, net time, net view , etc.
+            </p>
+            <img src="img/Captura5.PNG" alt="">
+            <li>10.TASKKILL</li>
+            <p>
+                Es probable que te sorprenda ver este comando en la lista, pues este lo que hace es finalizar procesos o tareas en 
+                ejecución, sin embargo, una característica que lo hace estar aquí es que también puede finalizar procesos en equipos 
+                remotos, de la siguiente manera:
+            </p>
+            <img src="img/Captura6.PNG" alt="">
+            <li>11.SHUTDOWN</li>
+            <p>
+                Le permite apagar o reiniciar computadoras locales o remotas, una a la vez.
+                Para forzar el cierre de las aplicaciones y reiniciar la computadora local después de un retraso de un minuto, con el 
+                motivo Aplicación: Mantenimiento (planificado) y el comentario “Reconfiguración de miapp.exe”.
+            </p>
+            <img src="img/Captura7.PNG" alt="">
+            <li>12.TRACERT</li>
+            <p>
+                Esta es una de las principales herramientas de diagnóstico que determina la ruta tomada a un destino mediante el envío de solicitudes de
+                 eco del protocolo ICMP o mensajes ICMPv6 al destino con valores de campo de tiempo de vida (TTL) que se mantienen incrementando.
+                Cada enrutador a lo largo de la ruta debe disminuir el TTL en un paquete IP en al menos 1 antes de reenviarlo. Efectivamente, el TTL es un contador de 
+                enlaces máximo. Cuando el TTL de un paquete llega a 0, se espera que el enrutador devuelva un mensaje de tiempo ICMP excedido a la computadora de origen.
+                Este comando determina la ruta enviando el primer mensaje de solicitud de eco con un TTL de 1 e incrementando el TTL en 1 en cada transmisión subsiguiente
+                 hasta que el objetivo responda o se alcance el número máximo de saltos. El número máximo de saltos es 30 de forma predeterminada y se puede especificar 
+                 mediante el parámetro /h.
+            </p>
+            <li>13.PATHPING</li>
+            <p>
+                Este comando proporciona información sobre la latencia de red y la pérdida en saltos intermedios entre un origen y un
+                 destino. Este comando envía varios mensajes de solicitud de eco a cada enrutador entre un origen y un destino, durante un período
+                  de tiempo, y luego calcula los resultados en función de los paquetes devueltos por cada enrutador.
+                Debido a que este comando muestra el grado de pérdida de paquetes en cualquier enrutador o enlace determinado, puede determinar qué 
+                enrutadores o subredes podrían tener problemas de red.
+            </p>
+
+    </ul>
+    
+
+</div>
+<a href="comunicacionred.html">Comunicaciones</a>
+           
+
+          
+
+</body>
+</html>

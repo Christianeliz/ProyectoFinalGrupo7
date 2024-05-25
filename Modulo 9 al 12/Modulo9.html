@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../stilo.css">
+    <title>Bases Relacionales</title
+    <title>Bases de datos relacionales</title>
+</head>
+<body>
+    <h1>Conceptos básicos de bases de datos relacionales</h1>
+    <h2>Campo</h2>
+    <p>Es la unidad más pequeña a la cual uno puede referirse en un programa. Desde el punto de vista del programador representa una característica de un individuo u objeto. Ejemplo si quisiéramos almacenar la información de un estudiante los campos serían las características asociadas a este estudiante tales como:</p>
+    <ul>
+        <li>Nombre</li>
+        <li>Fecha de nacimiento</li>
+        <li>Teléfono</li>
+    </ul>
+    <h2>Registro</h2>
+    <p>Es una colección de campos de iguales o de diferentes tipos. Siguiendo con el ejemplo diríamos entonces que cada campo representa a un estudiante, el cual está formado por el grupo de campos o características individuales.</p>
+    <img src="./img/image.png" alt="">
+    <h2>Archivo</h2>
+    <p>Es una colección de registros almacenados siguiendo una estructura homogénea.</p>
+    <h2>Base de datos</h2>
+    <p>Podemos decir entonces que una base de datos es una colección de archivos interrelacionados y cuyo contenido engloba a la información concerniente (almacenadas en archivos) de una organización, de tal manera que los datos estén disponibles para los usuarios.</p>
+    <h2>Componentes:</h2>
+    <ul>
+        <li>El hardware</li>
+        <li>El software DBMS</li>
+        <li>Los datos a manejar (así como el personal encargado del manejo del sistema).</li>
+    </ul>
+    <h2>Entidad</h2>
+    <p>En una base de datos relacional conoceremos como entidad a un objeto real o abstracto acerca del cual se almacenan</p>
+    <h2>Naturalezas:</h2>
+    <ul>
+        <li>Tangible: Persona, vehículo, material.</li>
+        <li>Intangible: Proyecto, materia, etc.</li>
+        <li>Eventual: Compra, venta, vuelo, etc.</li>
+        <li>Rol: Cliente, vendedor, etc.</li>
+        <li>Localización: Sucursal, bodega, etc.</li>
+    </ul>
+    <h2>Atributo</h2>
+    <p>Elemento o dato que describe o identifica cada entidad dándole características propias. Normalmente los atributos son virtualmente ilimitados para una entidad, pero deben seleccionarse los de mayor relevancia para el problema que se está analizando. Ejemplo Para una entidad llamada “Persona”, se podría tener varios atributos como Nombre, Apellido, Peso, Estatura etc.</p>
+    <h2>Tipo de relaciones:</h2>
+    <ul>
+        <li>Relación de uno a uno: Un registro de una Entidad A se relaciona únicamente con un registro de una tabla B y viceversa. Este tipo de relación no es común en el mundo de las bases de datos. Ejemplo, Supongamos que tenemos una tabla llamada vehículo y otra llamada Matriculas, la relación que se haría entre ambas tablas sería la siguiente: un vehículo solo puede estar asociado a una sola matricula y viceversa.</li>
+        <img src="./img/img13.png" alt="">
+        <li>Relación de uno a muchos: Un registro de una Entidad A se relaciona con varios registros de una tabla B. Ejemplo, Un Departamento tiene varios municipios, y un municipio solo pertenece a un departamento.</li>
+        <img src="./img/img14.png" alt="">
+        <li>Relación de muchos a muchos: Cuando un registro de una entidad A puede estar relacionado con más de un registro de la entidad B y viceversa. En este caso las dos tablas no pueden estar relacionadas directamente, se tiene que añadir una tabla entre las dos que incluya los pares de valores relacionados entre sí. Ejemplo, Los estudiantes puede asignarse varios cursos, pero un curso también puede tener varios estudiantes asignados.</li>
+        <img src="./img/img15.png" alt="">
+    </ul>
+    <h2>Llave primaria</h2>
+    <p>Una llave primaria es aquel atributo (o atributos) que consideramos clave para la identificación de los demás atributos que describen a la entidad. Ejemplo, si consideramos la entidad ALUMNO este podría tener los siguientes atributos: Carnet, Nombre, Dirección, Teléfono, de todos estos atributos el que podremos designar como llave primaria es el número de carnet, ya que es diferente para cada alumno y este los identifica de forma única dentro de la universidad.</p>
+    <h2>Llave foránea</h2>
+    <p>Es uno o más campos de una tabla que hacen referencia al campo o campos de llave primaria de otra tabla, una llave foránea indica como están relacionadas las entidades. Ejemplo, en la entidad cliente la llave primaria es No_Cliente y en factura la llave Foránea se llama Cod_Cliente, estos datos se relacionan entre sí de la forma en que en una factura se almacena el código del cliente al que pertenece dicha factura.</p>
+    <img src="./img/img16.png" alt="">
+    <h2>Insertar datos en PHPMyAdmin</h2>
+    <p>Para insertar datos en una base de datos MySQL utilizando phpMyAdmin, primero inicia sesión en phpMyAdmin, selecciona la base de datos y la tabla donde deseas insertar datos. Luego, ve a la pestaña "Insertar" y completa el formulario con los valores para cada columna. Una vez completado, haz clic en "Insertar" para enviar los datos. Verifica la inserción en phpMyAdmin y repite el proceso según sea necesario, asegurándote de tener los permisos adecuados en la base de datos y la tabla.</p>
+    <h2>Restaurar una base de datos en Workbench</h2>
+    <p>Para restaurar una base de datos en MySQL Workbench, sigue estos pasos:</p>
+    <ol>
+        <li>Abre MySQL Workbench y conecta a tu servidor de base de datos.</li>
+        <li>Selecciona la opción "Administración de Datos" en el menú principal.</li>
+        <li>Haz clic en "Restaurar" y selecciona el archivo de respaldo de la base de datos que deseas restaurar.</li>
+        <li>Configura las opciones de restauración según tus necesidades, como el nombre de la base de datos de destino.</li>
+        <li>Haz clic en "Iniciar Restauración" para comenzar el proceso de restauración.</li>
+        <li>Una vez completada la restauración, verifica que la base de datos se haya restaurado correctamente.</li>
+    </ol>
+    <h2>¿Por qué necesitas Restaurar un Backup?</h2>
+    <p>El mantenimiento es una parte integral de cualquier empresa exitosa y, por lo tanto, los DBA se esfuerzan todos los días para asegurarse de que sus bases de datos se mantengan actualizadas y funcionando correctamente. Los administradores de base de datos saben que deben hacer cuando las cosas salen mal y una de las más importantes es tener un Backup o copia de respaldo de tu base de datos disponible para restaurar lo más reciente posible.</p>
+    <h2>¿Qué es MySQL Workbench?</h2>
+    <p>MySQL Workbench es un software desarrollado por Oracle que permite administrar de forma remota bases de datos MySQL. Proporciona un entorno GUI integrado para el diseño de bases de datos MySQL. Puedes descargar MySQL Workbench desde el sitio web oficial de MySQL. Después de descargar el programa, sigue los pasos de instalación para instalar correctamente el software en tu máquina.</p>
+    <h2>Restaurando un Backup en MySQL Workbench</h2>
+    <p>Pasos para importar la copia de seguridad:</p>
+    <ol>
+        <li>Restaurar una base de datos es un proceso similar al de restaurar un backup y puede realizarlo a través de la herramienta de importación de datos.</li>
+        <li>Seleccione la ruta desde la cual se deben importar las tablas en el campo "Importar desde la carpeta del proyecto" o use la opción "Importar desde un archivo autónomo" si tiene una copia .sql de la base de datos.</li>
+    </ol>
+    <h2>Hacer backup en WorkBench</h2>
+    <p>Primero debemos ingresar a nuestro Mysql Workbench y seleccionar la opción Data Export, tal como se señala en la figura:</p>
+    <img src="./img/img2.png" alt="Data Export">
+    <p>Nos aparecerá la siguiente pantalla:</p>
+    <img src="./img/img3.png" alt="Export Screen">
+    <p>Aquí seleccionamos la base de datos que queremos respaldar en nuestro caso seleccionaremos la BD "bdinventario".</p>
+    <p>Como veremos aparecen por defecto seleccionadas todas las tablas de la base de datos, para nuestro caso dejamos seleccionado todo por defecto. En las opciones de la parte inferior debemos escoger si queremos crear en una carpeta varios archivos por cada tabla o un solo archivo para toda la base de datos, en nuestro caso elegimos la segunda opción:</p>
+    <img src="./img/img4.png" alt="Export Options">
+    <p>Finalmente, hacemos clic en "Start Export" para iniciar el proceso de backup.</p>
+    <p>Luego debemos seleccionar la ubicación y el nombre de nuestro archivo sql para poder guardarlo:</p>
+    <img src="./img/img5.png" alt="Save Location">
+    <p>Presionamos el botón que dice Start Export.</p>
+    <p>Nos aparecerá la siguiente pantalla donde esperamos que Mysql Workbench termine su trabajo.</p>
+    <img src="./img/img6.png" alt="Export Progress">
+    <p>Para verificar que todo ha sido correcto, buscamos el archivo donde lo guardamos y lo abrimos con el bloc de notas para ver su contenido.</p>
+    <img src="./img/img7.png" alt="">
+    <h2>Laboratorio Clase 9 (Individual) - Capturas de Pantalla XAMPP YWORKBENCH</h2>
+    <p>Ejecución de XAMPP con Mysql y APACHE</p>
+    <img src="./img/img8.png" alt="">
+    <p>Ingresar en el navegador al http://localhost:80 y captura </p>
+    <img src="./img/img9.png" alt="">
+    <p>Ingresar en el navegador al http://localhost:80/phpmyadmin . y captura</p>
+    <img src="./img/ima10.png" alt="">
+    <p>Ejecución de Workbench con el Estado de Servidor en Sever Status</p>
+    <img src="./img/img11.png" alt="">
+    <p>Captura de Pantalla del Diagrama Entidad Relación de la base de datos universidadUMG</p>
+    <img src="./img/img12.png" alt="">
+    <h2>Proyecto Parcial (Grupal) 3- Investigación de un negocio - 1era Parte de Base de Datos</h2>
+    <img src="./img/img17.png" alt="">
+    <p><a href="index.html">...Volver</a></p>
+
+</body>
+</html>

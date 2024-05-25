@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilo3.css">
+    <title>PROYECTO FINAL</title>
+</head>
+<body>
+    <h1>El PCB O BCP (bloqueo control del  proceso)</h1>
+    <p>El bloque de control del proceso (BCP) o en inglés PCB (Process Control Block) es un registro especial donde el sistema operativo agrupa toda la información que necesita conocer respecto a un proceso particular. Cada vez que se crea un proceso el sistema operativo crea el BCP correspondiente para que sirva como descripción en tiempo de ejecución durante toda la vida del proceso.
+
+        Cuando el proceso termina, su BCP es borrado y el registro puede ser utilizado para otros procesos. Un proceso resulta conocido para el sistema operativo y por tanto elegible para competir por los recursos del sistema sólo cuando existe un BCP activo asociado a él. El bloque de control de proceso es una estructura de datos con campos para registrar los diferentes aspectos de la ejecución del proceso y de la utilización de recursos. La información almacenada en un BCP incluye típicamente algunos o todos los campos siguientes:</p>
+        <ul>
+            <li>Identificador de proceso (Process Identificator -PID-, de sus siglas en inglés).</li>
+            <li>Estado del proceso. Por ej: listo, en espera, bloqueado.</li>
+            <li>Contador de programa: dirección de la próxima instrucción a ejecutar.</li>
+            <li>Valores de registro de CPU. Se utilizan también en el cambio de contexto.</li>
+            <li>Espacio de direcciones de memoria.</li>
+            <li>Prioridad en caso de utilizarse dicho algoritmo para planificación de CPU.</li>
+            <li>Lista de recursos asignados (incluyendo descriptores de archivos y sockets abiertos).</li>
+            <li>Estadísticas del proceso.</li>
+            <li>Datos del propietario (owner).</li>
+            <li>Permisos asignados.</li>
+            <li>Señales (Signals) pendientes de ser servidas. (Almacenados en un mapa de bits).</li>
+        </ul>
+        <br>
+        <p>Esta lista es simplemente indicativa, cada sistema operativo tiene su propio diseño de BCP, con el conjunto de metadatos necesarios para la administración. Puede medir desde 32 bits a 1024. Su denominación cambia según el sistema operativo, por ej. en IBM se designa PSW por palabra de estado de proceso. Difiere significativamente entre los sistemas de procesamiento por lotes (BATCH) y los sistemas interactivos. Algunos sistemas de multiprogramación incluyen información de mantenimiento con el propósito de facturar a los usuarios individuales el tiempo de procesador, el almacenamiento, las operaciones de E/S y otras utilizaciones de recursos. Una vez creado, el BCP se rellena con los atributos definidos como parámetros que se hallan en la plantilla del proceso o que son especificados como parámetros de la llamada al sistema operativo crear_proceso. En ese momento el sistema operativo suele asignar valores a otros campos. Por ejemplo, cuando se crea un proceso, los registros e indicadores hardware se fijan a los valores proporcionados por el cargador/enlazador. Cada vez que un proceso queda suspendido, el contenido de los registros del procesador es generalmente guardado en la pila, y el puntero al marco de la pila en cuestión se almacena en el BCP. De este modo los valores de los registros son restaurados cuando el proceso es seleccionado para ejecutarse nuevamente.</p>
+    <a href="../so.html">Volver</a>
+    <p>Te podría interesar:</p>
+    <ul>
+        <li><a href="../Modelos de estado/dos estados.html">Modelo de dos estados</a></li>
+        <li><a href="../Modelos de estado/cinco estados.html">Modelo de cinco estados</a></li>
+        <li><a href="../Modelos de estado/estado proceso.html">Estado de un proceso</a></li>
+        <li><a href="../Modelos de estado/bloqueados.html">Bloqueados</a></li>
+        <br>
+        <p><a href="../Pagina Principal.html">Volver Pagina Principal Proyecto Final</a></p>
+    </ul>
+</body>
+</html>
